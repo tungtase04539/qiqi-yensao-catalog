@@ -7,7 +7,7 @@ const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replac
 const attr = (s) => esc(s).replace(/"/g, '&quot;');
 
 const corners = `<span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>`;
-const logo = (lang) => `<img class="corner-logo" src="assets/logo-corner.png" alt="${attr(lang === 'cn' ? 'QiQi 燕窝' : 'QiQi Yến')}">`;
+const logo = (lang) => `<img class="corner-logo" src="assets/logo-corner.webp" alt="${attr(lang === 'cn' ? 'QiQi 燕窝' : 'QiQi Yến')}">`;
 const footer = (lang) => `<div class="footer">${esc(site.productFooter[lang])}</div>`;
 
 const page = (lang, kind, body) =>
@@ -23,16 +23,16 @@ function coverPage(lang) {
   const c = cover[lang];
   const contact = `
     <div class="cover-contact">
-      <div class="num"><img src="assets/flag-vn.png" alt="VN"><span>${esc(site.phoneVN)}</span></div>
+      <div class="num"><img src="assets/flag-vn.webp" alt="VN"><span>${esc(site.phoneVN)}</span></div>
       <div class="sep"></div>
-      <div class="num"><img src="assets/flag-cn.png" alt="CN"><span>${esc(site.phoneCN)}</span></div>
+      <div class="num"><img src="assets/flag-cn.webp" alt="CN"><span>${esc(site.phoneCN)}</span></div>
     </div>`;
   const body = `
     <div class="cover-layout">
       <div class="seal-wrap">
         <div class="seal">
           <div class="disc"></div><div class="disc-inner"></div>
-          <img src="assets/logo2.png" alt="${attr('QiQi Yến')}">
+          <img src="assets/logo2.webp" alt="${attr('QiQi Yến')}">
         </div>
       </div>
       <div class="cover-divider"><div class="line-top"></div><div class="gem"></div><div class="line-bot"></div></div>
@@ -221,7 +221,7 @@ function thanksPage(lang) {
   // No corner logo here — the centered seal medallion already carries the brand.
   const body = `
     <div class="thanks-layout">
-      <div class="thanks-seal"><div class="disc"></div><div class="disc-inner"></div><img src="assets/logo2.png" alt="${attr('QiQi Yến')}"></div>
+      <div class="thanks-seal"><div class="disc"></div><div class="disc-inner"></div><img src="assets/logo2.webp" alt="${attr('QiQi Yến')}"></div>
       <div class="thanks-kicker">${esc(t.kicker)}</div>
       <div class="thanks-title">${esc(t.title)}</div>
       <div class="thanks-subtitle">${esc(t.subtitle)}</div>
@@ -231,9 +231,9 @@ function thanksPage(lang) {
       <div class="intro-rule"><div class="seg"></div><div class="gem"></div><div class="seg"></div></div>
       <div class="thanks-contact-label">${esc(t.contactLabel)}</div>
       <div class="contact-row">
-        <div class="num"><img src="assets/flag-vn.png" alt="VN"><span>${esc(site.phoneVN)}</span></div>
+        <div class="num"><img src="assets/flag-vn.webp" alt="VN"><span>${esc(site.phoneVN)}</span></div>
         <div class="sep"></div>
-        <div class="num"><img src="assets/flag-cn.png" alt="CN"><span>${esc(site.phoneCN)}</span></div>
+        <div class="num"><img src="assets/flag-cn.webp" alt="CN"><span>${esc(site.phoneCN)}</span></div>
       </div>
     </div>
     <div class="footer">${esc(t.footer)}</div>`;

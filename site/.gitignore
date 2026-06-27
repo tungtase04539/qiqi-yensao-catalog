@@ -1,3 +1,4 @@
 node_modules/
-# Generated PDF artifacts (regenerate with `node pdf.mjs`)
+# Generated artifacts (regenerate with the scripts)
 *.pdf
+QiQi-Catalog-*.html

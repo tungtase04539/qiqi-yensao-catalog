@@ -41,6 +41,17 @@ node pdf.mjs                      # export QiQi-BaoGia-VI.pdf + QiQi-BaoGia-CN.p
 `index.html` opens directly in any browser. The PDFs are git-ignored
 (build artifacts) — regenerate them with `node pdf.mjs`.
 
+## Fast, self-contained HTML (lightweight)
+
+```bash
+node inline.mjs   # or: npm run inline
+```
+
+Produces `QiQi-Catalog-VI.html` and `QiQi-Catalog-CN.html` — single files
+(~3.5 MB each) with all images inlined. They open instantly on phone/PC and
+scroll smoothly, far lighter than the PDFs. Also git-ignored (regenerate any
+time). Images live in `assets/` as optimized WebP (~4 MB total).
+
 ## Gift-box images
 
 No dedicated gift-box photos were provided in the design hand-off, so each

@@ -67,9 +67,9 @@ export const intro = {
     footer: '福盛贸易投资发展有限公司  ·  QiQi 燕窝  ·  税号 0202247835  ·  qiqiyensao.com',
   },
   certs: [
-    { img: 'cert-fda.png', w: 226, boxW: 238, vi: 'Chứng nhận FDA (Hoa Kỳ)', cn: '美国 FDA 注册认证' },
-    { img: 'cert-top10.png', w: 206, boxW: 218, vi: 'Top 10 Thương hiệu Uy tín Quốc gia 2024', cn: '2024 年越南国家信誉十大品牌' },
-    { img: 'cert-cn.png', w: 205, boxW: 217, vi: 'Chứng nhận chất lượng (Trung Quốc)', cn: '中国产品质量检验报告' },
+    { img: 'cert-fda.webp', w: 226, boxW: 238, vi: 'Chứng nhận FDA (Hoa Kỳ)', cn: '美国 FDA 注册认证' },
+    { img: 'cert-top10.webp', w: 206, boxW: 218, vi: 'Top 10 Thương hiệu Uy tín Quốc gia 2024', cn: '2024 年越南国家信誉十大品牌' },
+    { img: 'cert-cn.webp', w: 205, boxW: 217, vi: 'Chứng nhận chất lượng (Trung Quốc)', cn: '中国产品质量检验报告' },
   ],
 };
 
@@ -106,7 +106,7 @@ export const toc = {
 export const products = [
   {
     id: 'yen-tho',
-    media: { type: 'gallery', hero: 'yentho-3.png', thumbs: [{ img: 'yentho-1.png' }, { img: 'yentho-2.png' }] },
+    media: { type: 'gallery', hero: 'yentho-3.webp', thumbs: [{ img: 'yentho-1.webp' }, { img: 'yentho-2.webp' }] },
     vi: {
       kicker: 'SẢN PHẨM 01 · YẾN SÀO NGUYÊN BẢN',
       title: 'Yến Thô', titleSize: 46,
@@ -148,7 +148,7 @@ export const products = [
   },
   {
     id: 'yen-rut-long',
-    media: { type: 'gallery', hero: 'tinhche-giftbox1.png', heroPos: 'center 58%', thumbs: [{ img: 'tinhche-plate.png' }, { img: 'tinhche-giftbox2.png' }] },
+    media: { type: 'gallery', hero: 'tinhche-giftbox1.webp', heroPos: 'center 58%', thumbs: [{ img: 'tinhche-plate.webp' }, { img: 'tinhche-giftbox2.webp' }] },
     vi: {
       kicker: 'SẢN PHẨM 02 · YẾN TINH CHẾ',
       title: 'Yến Rút Lông Nước', titleSize: 43,
@@ -190,7 +190,7 @@ export const products = [
   },
   {
     id: 'yen-tinh-che',
-    media: { type: 'gallery', hero: 'tinhche-giftbox2.png', thumbs: [{ img: 'tinhche-plate.png' }, { img: 'tinhche-giftbox1.png', pos: 'center 30%' }] },
+    media: { type: 'gallery', hero: 'tinhche-giftbox2.webp', thumbs: [{ img: 'tinhche-plate.webp' }, { img: 'tinhche-giftbox1.webp', pos: 'center 30%' }] },
     vi: {
       kicker: 'SẢN PHẨM 02 · YẾN TINH CHẾ',
       title: 'Yến Tinh Chế', titleSize: 46,
@@ -727,7 +727,7 @@ export const gifts = [
     },
   },
   {
-    id: 'gift-yen-tho', image: 'yentho-3.png',
+    id: 'gift-yen-tho', image: 'yentho-3.webp',
     vi: {
       title: 'Hộp Quà Yến Thô', titleSize: 44,
       subtitle: 'Hộp quà cao cấp · Yến sào nguyên bản · Tịnh khối tổ yến khô',
@@ -781,7 +781,7 @@ export const gifts = [
     },
   },
   {
-    id: 'gift-rut-long', image: 'tinhche-giftbox1.png',
+    id: 'gift-rut-long', image: 'tinhche-giftbox1.webp',
     vi: {
       title: 'Hộp Quà Yến Rút Lông Nước', titleSize: 36, titleMaxWidth: 430,
       subtitle: 'Hộp quà cao cấp · Yến rút lông sạch · Tịnh khối tổ yến khô',
