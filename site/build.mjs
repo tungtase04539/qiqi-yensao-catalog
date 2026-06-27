@@ -280,16 +280,29 @@ ${allPages.join('\n')}
   window.addEventListener('resize', fit);
   fit();
 
-  // Preload + decode every image up front, then reveal — so once it's ready,
-  // scrolling shows everything instantly (no per-image lazy loading).
-  function reveal() { document.body.classList.add('ready'); }
-  window.addEventListener('load', function () {
+  // Preload every image up front, then reveal — so once it's ready, scrolling
+  // shows everything instantly. Multiple independent triggers + a hard timeout
+  // guarantee the loader never gets stuck.
+  var revealed = false;
+  function reveal() {
+    if (revealed) return;
+    revealed = true;
+    document.body.classList.add('ready');
+  }
+  setTimeout(reveal, 3500);            // absolute fallback — never spin forever
+  window.addEventListener('load', reveal);
+  function waitImages() {
     var imgs = Array.prototype.slice.call(document.images);
     Promise.all(imgs.map(function (im) {
-      return im.decode ? im.decode().catch(function () {}) : Promise.resolve();
+      if (im.complete) return Promise.resolve();
+      return new Promise(function (res) {
+        im.addEventListener('load', res);
+        im.addEventListener('error', res);
+      });
     })).then(reveal);
-    setTimeout(reveal, 8000); // safety fallback
-  });
+  }
+  if (document.readyState !== 'loading') waitImages();
+  else document.addEventListener('DOMContentLoaded', waitImages);
 })();
 </script>
 </body>
