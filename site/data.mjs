@@ -148,7 +148,7 @@ export const products = [
   },
   {
     id: 'yen-rut-long',
-    media: { type: 'gallery', hero: 'rutlong-box.jpg', thumbs: [{ img: 'tinhche-plate.jpg' }, { img: 'tinhche-giftbox2.jpg' }] },
+    media: { type: 'single', img: 'rutlong-box.jpg' },
     vi: {
       kicker: 'SẢN PHẨM 02 · YẾN TINH CHẾ',
       title: 'Yến Rút Lông Nước', titleSize: 43,
@@ -190,7 +190,7 @@ export const products = [
   },
   {
     id: 'yen-tinh-che',
-    media: { type: 'gallery', hero: 'tinhche-box.jpg', thumbs: [{ img: 'tinhche-plate.jpg' }, { img: 'tinhche-giftbox1.jpg', pos: 'center 30%' }] },
+    media: { type: 'single', img: 'tinhche-box.jpg' },
     vi: {
       kicker: 'SẢN PHẨM 02 · YẾN TINH CHẾ',
       title: 'Yến Tinh Chế', titleSize: 46,
@@ -240,7 +240,7 @@ export const products = [
       desc: 'Giải pháp bồi bổ thượng hạng cho người cần kiểm soát đường huyết. Thay đường phèn bằng đường ăn kiêng Isomalt, tăng cường 7% đông trùng hạ thảo và 2% hồng sâm thật. Nước yến nâu vàng, đượm hương thảo dược — chỉ 9 kcal/100g, không chất béo, an toàn cho người tiểu đường.',
       nutriLabel: 'THÀNH PHẦN & DINH DƯỠNG',
       nutrition: [
-        { v: '35%', l: 'Tổ yến' }, { v: '7%', l: 'Đông trùng hạ thảo' },
+        { v: '2g', l: 'Tổ yến' }, { v: '7%', l: 'Đông trùng hạ thảo' },
         { v: '2%', l: 'Hồng sâm thật' }, { v: '9 kcal', l: 'Năng lượng / 100g' },
       ],
       suitableLabel: 'PHÙ HỢP VỚI',
@@ -250,7 +250,7 @@ export const products = [
         'Người lớn tuổi có huyết áp, tim mạch cần phục hồi sinh lực',
       ],
       specLabel: 'QUY CÁCH', spec: 'Lọ thủy tinh 75ml · Lốc 5 / 6 / 7 lọ',
-      priceLabel: 'ĐƠN GIÁ', price: '55.000 ₫', priceUnit: '/hũ',
+      priceLabel: 'ĐƠN GIÁ', price: '33.000 ₫', priceUnit: '/hũ',
     },
     cn: {
       kicker: '产品 03 · 即食燕窝',
@@ -259,7 +259,7 @@ export const products = [
       desc: '为需要严格控糖人群研制的高端滋补饮品。以 Isomalt 代糖取代冰糖，强化添加 7% 冬虫夏草与 2% 真红参。燕窝呈天然棕黄色、草本香浓——每 100g 仅 9 千卡、零脂肪，糖尿病人也安心。',
       nutriLabel: '成分与营养',
       nutrition: [
-        { v: '35%', l: '燕窝含量' }, { v: '7%', l: '冬虫夏草' },
+        { v: '2g', l: '燕窝含量' }, { v: '7%', l: '冬虫夏草' },
         { v: '2%', l: '真红参' }, { v: '9 kcal', l: '热量 / 100g' },
       ],
       suitableLabel: '适合人群',
@@ -269,7 +269,7 @@ export const products = [
         '患高血压、心血管疾病的长辈，需恢复体力',
       ],
       specLabel: '规格', spec: '玻璃瓶 75ml · 5 / 6 / 7 瓶礼盒',
-      priceLabel: '价格', price: '55.000 ₫', priceUnit: '/瓶',
+      priceLabel: '价格', price: '33.000 ₫', priceUnit: '/瓶',
     },
   },
   {
@@ -282,7 +282,7 @@ export const products = [
       desc: 'Phiên bản hoàng kim với hàm lượng tổ yến lên đến 50%, kết hợp đông trùng hạ thảo và hồng sâm. Bồi bổ cơ thể toàn diện, tăng cường thể lực và nâng cao sức đề kháng. Dùng trực tiếp, ngon hơn khi ướp lạnh.',
       nutriLabel: 'THÀNH PHẦN & QUY CÁCH',
       nutrition: [
-        { v: '50%', l: 'Hàm lượng tổ yến' }, { v: '1%', l: 'Hồng sâm thật' },
+        { v: '4g', l: 'Hàm lượng tổ yến' }, { v: '1%', l: 'Hồng sâm thật' },
         { v: '150ml', l: 'Thể tích thực' }, { v: '24', l: 'Tháng hạn dùng' },
       ],
       suitableLabel: 'PHÙ HỢP VỚI',
@@ -292,7 +292,7 @@ export const products = [
         'Quà biếu cao cấp cho đối tác và người thân yêu',
       ],
       specLabel: 'QUY CÁCH', spec: 'Lọ thủy tinh 150ml · Hộp quà 10 lọ',
-      priceLabel: 'ĐƠN GIÁ', price: '120.000 ₫', priceFrom: 'Từ ', priceUnit: '/hũ',
+      priceLabel: 'ĐƠN GIÁ', price: '70.000 ₫', priceUnit: '/hũ',
     },
     cn: {
       kicker: '产品 03 · 即食燕窝',
@@ -301,7 +301,7 @@ export const products = [
       desc: '皇金版本，燕窝含量高达 50%，搭配冬虫夏草与红参。全面滋补身体、增强体力、提升免疫力。可直接饮用，冷藏后风味更佳。',
       nutriLabel: '成分与规格',
       nutrition: [
-        { v: '50%', l: '燕窝含量' }, { v: '1%', l: '真红参' },
+        { v: '4g', l: '燕窝含量' }, { v: '1%', l: '真红参' },
         { v: '150ml', l: '净含量' }, { v: '24', l: '个月保质期' },
       ],
       suitableLabel: '适合人群',
@@ -311,7 +311,7 @@ export const products = [
         '馈赠合作伙伴与亲友的高档好礼',
       ],
       specLabel: '规格', spec: '玻璃瓶 150ml · 10 瓶礼盒',
-      priceLabel: '价格', price: '120.000 ₫', priceFrom: '从 ', priceUnit: '/瓶',
+      priceLabel: '价格', price: '70.000 ₫', priceUnit: '/瓶',
     },
   },
   {
@@ -334,7 +334,7 @@ export const products = [
         'Người lớn tuổi cần ổn định đường huyết, phòng ngừa tim mạch',
       ],
       specLabel: 'QUY CÁCH', spec: 'Lọ thủy tinh 70ml · Lốc 6 lọ (420ml)',
-      priceLabel: 'ĐƠN GIÁ', price: '48.000 ₫', priceFrom: 'Từ ', priceUnit: '/hũ',
+      priceLabel: 'ĐƠN GIÁ', price: '28.800 ₫', priceUnit: '/hũ',
     },
     cn: {
       kicker: '产品 03 · 即食燕窝',
@@ -353,7 +353,7 @@ export const products = [
         '需稳定血糖、预防心血管疾病的长辈',
       ],
       specLabel: '规格', spec: '玻璃瓶 70ml · 6 瓶装（420ml）',
-      priceLabel: '价格', price: '48.000 ₫', priceFrom: '从 ', priceUnit: '/瓶',
+      priceLabel: '价格', price: '28.800 ₫', priceUnit: '/瓶',
     },
   },
   {
@@ -376,7 +376,7 @@ export const products = [
         'Người lớn tuổi cần bồi dưỡng cơ thể hàng ngày',
       ],
       specLabel: 'QUY CÁCH', spec: 'Lọ thủy tinh 70ml · Lốc 6 lọ (420ml)',
-      priceLabel: 'ĐƠN GIÁ', price: '48.000 ₫', priceFrom: 'Từ ', priceUnit: '/hũ',
+      priceLabel: 'ĐƠN GIÁ', price: '28.800 ₫', priceUnit: '/hũ',
     },
     cn: {
       kicker: '产品 03 · 即食燕窝',
@@ -395,7 +395,7 @@ export const products = [
         '需日常调养身体的长辈',
       ],
       specLabel: '规格', spec: '玻璃瓶 70ml · 6 瓶装（420ml）',
-      priceLabel: '价格', price: '48.000 ₫', priceFrom: '从 ', priceUnit: '/瓶',
+      priceLabel: '价格', price: '28.800 ₫', priceUnit: '/瓶',
     },
   },
   {
@@ -418,7 +418,7 @@ export const products = [
         'Người làm việc trí óc cường độ cao, dễ căng thẳng, suy nhược',
       ],
       specLabel: 'QUY CÁCH', spec: 'Lọ thủy tinh 70ml · Lốc 6 lọ (420ml)',
-      priceLabel: 'ĐƠN GIÁ', price: '55.000 ₫', priceFrom: 'Từ ', priceUnit: '/hũ',
+      priceLabel: 'ĐƠN GIÁ', price: '33.000 ₫', priceUnit: '/hũ',
     },
     cn: {
       kicker: '产品 03 · 即食燕窝',
@@ -437,7 +437,7 @@ export const products = [
         '高强度脑力工作、易疲劳人群',
       ],
       specLabel: '规格', spec: '玻璃瓶 70ml · 6 瓶装（420ml）',
-      priceLabel: '价格', price: '55.000 ₫', priceFrom: '从 ', priceUnit: '/瓶',
+      priceLabel: '价格', price: '33.000 ₫', priceUnit: '/瓶',
     },
   },
   {
@@ -460,7 +460,7 @@ export const products = [
         'Người lớn tuổi cần bồi dưỡng cơ thể hàng ngày',
       ],
       specLabel: 'QUY CÁCH', spec: 'Lọ thủy tinh 150ml · Lốc 6 lọ',
-      priceLabel: 'ĐƠN GIÁ', price: 'Liên hệ',
+      priceLabel: 'ĐƠN GIÁ', price: '45.000 ₫', priceUnit: '/hũ',
     },
     cn: {
       kicker: '产品 03 · 即食燕窝',
@@ -479,7 +479,7 @@ export const products = [
         '需日常调养身体的长辈',
       ],
       specLabel: '规格', spec: '玻璃瓶 150ml · 6 瓶装',
-      priceLabel: '价格', price: '请联系',
+      priceLabel: '价格', price: '45.000 ₫', priceUnit: '/瓶',
     },
   },
   {
@@ -502,7 +502,7 @@ export const products = [
         'Người lớn tuổi có huyết áp, tim mạch cần phục hồi sinh lực',
       ],
       specLabel: 'QUY CÁCH', spec: 'Lọ thủy tinh 150ml · Lốc 6 lọ',
-      priceLabel: 'ĐƠN GIÁ', price: 'Liên hệ',
+      priceLabel: 'ĐƠN GIÁ', price: '48.000 ₫', priceUnit: '/hũ',
     },
     cn: {
       kicker: '产品 03 · 即食燕窝',
@@ -521,7 +521,7 @@ export const products = [
         '患高血压、心血管疾病的长辈，需恢复体力',
       ],
       specLabel: '规格', spec: '玻璃瓶 150ml · 6 瓶装',
-      priceLabel: '价格', price: '请联系',
+      priceLabel: '价格', price: '48.000 ₫', priceUnit: '/瓶',
     },
   },
   {
@@ -701,7 +701,7 @@ export const gifts = [
       title: 'Hộp Quà Hoàng Yến Đông Trùng', titleSize: 34,
       subtitle: 'Hộp quà cao cấp · Lọ thủy tinh 150ml · Yến chưng sẵn',
       nutrition: [
-        { v: '50%', l: 'Hàm lượng tổ yến' }, { v: '1%', l: 'Hồng sâm thật' },
+        { v: '4g', l: 'Hàm lượng tổ yến' }, { v: '1%', l: 'Hồng sâm thật' },
         { v: '150ml', l: 'Thể tích thực' }, { v: '24', l: 'Tháng hạn dùng' },
       ],
       unitNote: 'Đơn giá lẻ từ 120.000₫/hũ',
@@ -715,7 +715,7 @@ export const gifts = [
       title: '皇燕参虫草礼盒', titleSize: 42,
       subtitle: '高档礼盒 · 玻璃瓶 150ml · 即食燕窝',
       nutrition: [
-        { v: '50%', l: '燕窝含量' }, { v: '1%', l: '真红参' },
+        { v: '4g', l: '燕窝含量' }, { v: '1%', l: '真红参' },
         { v: '150ml', l: '净含量' }, { v: '24', l: '个月保质期' },
       ],
       unitNote: '零售单价 从 120.000₫/瓶',

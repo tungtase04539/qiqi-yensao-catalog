@@ -46,7 +46,9 @@
   .lang button:hover{border-color:var(--gold-l);}
 
   main{flex:1; display:flex; align-items:center; justify-content:center; padding:14px; min-height:0;}
-  .bookwrap{ width:min(94vw, 820px); margin:0 auto; }
+  /* Size the book by available height so the single landscape page is as
+     large as possible with minimal empty space (width = height × 1.414). */
+  .bookwrap{ width: min(96vw, calc((100vh - 156px) * 1.414)); margin:0 auto; }
   #flip{ touch-action: pan-y; min-width:0 !important; }
   #flip .page-img{ /* StPageFlip wraps images */ }
   .stPage{ background:#F7F1E3; }
@@ -101,7 +103,7 @@
     var PAGES = { vi: 20, cn: 20 };
     var SUBTITLE = { vi: 'CATALOG · BÁO GIÁ', cn: '产品目录 · 报价单' };
     var HINT = { vi: 'Kéo mép trang hoặc bấm ‹ › để lật', cn: '拖动书页边缘或点击 ‹ › 翻页' };
-    var book = null, currentLang = 'vi';
+    var book = null, currentLang = 'vi', booksLoaded = false;
 
     function imgs(lang){
       var arr = [];
@@ -112,6 +114,23 @@
       // In two-page (landscape) mode StPageFlip reports the left page index.
       document.getElementById('cur').textContent = Math.min(idx + 1, PAGES[currentLang]);
     }
+    function ensureBook(){
+      if (book) return;
+      book = new St.PageFlip(document.getElementById('flip'), {
+        width: 1123, height: 794,
+        size: 'stretch',
+        // Force single-page (portrait) always: orientation goes portrait when
+        // container width < 2*minWidth. The big minWidth is neutralised for
+        // layout by `#flip{min-width:0!important}`, so it only flips the mode.
+        minWidth: 3000, maxWidth: 2000,
+        minHeight: 198, maxHeight: 1414,
+        drawShadow: true, maxShadowOpacity: 0.5,
+        flippingTime: 750, usePortrait: true, autoSize: true,
+        showCover: false, mobileScrollSupport: false, swipeDistance: 25,
+        clickEventForward: true, useMouseEvents: true,
+      });
+      book.on('flip', function(e){ setCounter(e.data); });
+    }
     function setLang(lang){
       currentLang = lang;
       document.documentElement.lang = lang === 'cn' ? 'zh' : 'vi';
@@ -120,35 +139,19 @@
       document.getElementById('subtitle').textContent = SUBTITLE[lang];
       document.getElementById('hint').textContent = HINT[lang];
       document.getElementById('total').textContent = PAGES[lang];
-      build();
-    }
-    function build(){
-      var holder = document.getElementById('flip');
-      if (book){ try { book.destroy(); } catch(e){} }
-      holder.innerHTML = '';
-      book = new St.PageFlip(holder, {
-        width: 1123, height: 794,
-        size: 'stretch',
-        // Force single-page (portrait) always: orientation goes portrait when
-        // container width < 2*minWidth. The big minWidth is neutralised for
-        // layout by `#flip{min-width:0!important}`, so it only flips the mode.
-        minWidth: 900, maxWidth: 1123,
-        minHeight: 198, maxHeight: 794,
-        drawShadow: true, maxShadowOpacity: 0.5,
-        flippingTime: 750, usePortrait: true, autoSize: true,
-        showCover: false, mobileScrollSupport: false, swipeDistance: 25,
-        clickEventForward: true, useMouseEvents: true,
-      });
-      book.loadFromImages(imgs(currentLang));
+      ensureBook();
+      // First load uses loadFromImages; switching languages uses updateFromImages
+      // on the SAME instance (destroy/recreate left it blank; reload stacked).
+      if (booksLoaded) book.updateFromImages(imgs(lang));
+      else { book.loadFromImages(imgs(lang)); booksLoaded = true; }
       setCounter(0);
-      book.on('flip', function(e){ setCounter(e.data); });
     }
     document.addEventListener('keydown', function(e){
       if (!book) return;
       if (e.key === 'ArrowLeft') book.flipPrev();
       else if (e.key === 'ArrowRight') book.flipNext();
     });
-    window.addEventListener('load', build);
+    window.addEventListener('load', function(){ setLang('vi'); });
     window.addEventListener('resize', function(){
       // StPageFlip autoSize handles width; update on orientation change just in case.
     });
