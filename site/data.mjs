@@ -659,7 +659,7 @@ export const gifts = [
     },
   },
   {
-    id: 'gift-sam-kieng', image: null,
+    id: 'gift-sam-kieng', image: 'gift-samkieng.jpg',
     vi: {
       title: 'Hộp Quà Sâm ĐT Đường Kiêng', titleSize: 32, titleMaxWidth: 420,
       subtitle: 'Hộp quà cao cấp · Lọ thủy tinh 75ml · Đường ăn kiêng Isomalt',
