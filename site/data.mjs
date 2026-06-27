@@ -124,7 +124,7 @@ export const products = [
         'Quà biếu sức khỏe ý nghĩa cho người thân và đối tác',
       ],
       specLabel: 'QUY CÁCH', spec: '100g',
-      priceLabel: 'ĐƠN GIÁ', price: '2.800.000 ₫',
+      priceLabel: 'ĐƠN GIÁ', price: '2.000.000 ₫',
     },
     cn: {
       kicker: '产品 01 · 天然原盏燕窝',
@@ -143,7 +143,7 @@ export const products = [
         '馈赠亲友与合作伙伴的健康好礼',
       ],
       specLabel: '规格', spec: '100g',
-      priceLabel: '价格', price: '2.800.000 ₫',
+      priceLabel: '价格', price: '2.000.000 ₫',
     },
   },
   {
@@ -166,7 +166,7 @@ export const products = [
         'Quà biếu sức khỏe sang trọng, tinh tế cho đối tác và người thân',
       ],
       specLabel: 'QUY CÁCH', spec: '100g',
-      priceLabel: 'ĐƠN GIÁ', price: '4.300.000 ₫',
+      priceLabel: 'ĐƠN GIÁ', price: '3.400.000 ₫',
     },
     cn: {
       kicker: '产品 02 · 精制燕窝',
@@ -185,7 +185,7 @@ export const products = [
         '馈赠合作伙伴与亲友的高档健康好礼',
       ],
       specLabel: '规格', spec: '100g',
-      priceLabel: '价格', price: '4.300.000 ₫',
+      priceLabel: '价格', price: '3.400.000 ₫',
     },
   },
   {
@@ -208,7 +208,7 @@ export const products = [
         'Quà biếu sức khỏe sang trọng, thiết thực cho đối tác và khách hàng',
       ],
       specLabel: 'QUY CÁCH', spec: '100g',
-      priceLabel: 'ĐƠN GIÁ', price: '3.800.000 ₫',
+      priceLabel: 'ĐƠN GIÁ', price: '3.100.000 ₫',
     },
     cn: {
       kicker: '产品 02 · 精制燕窝',
@@ -227,7 +227,7 @@ export const products = [
         '馈赠合作伙伴与客户的高档实用健康好礼',
       ],
       specLabel: '规格', spec: '100g',
-      priceLabel: '价格', price: '3.800.000 ₫',
+      priceLabel: '价格', price: '3.100.000 ₫',
     },
   },
   {
