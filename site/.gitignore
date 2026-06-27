@@ -1,0 +1,3 @@
+node_modules/
+# Generated PDF artifacts (regenerate with `node pdf.mjs`)
+*.pdf

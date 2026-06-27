@@ -1,0 +1,14 @@
+{
+  "name": "qiqi-yensao-catalog",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "QiQi Yến Sào bilingual (VI/CN) product catalog — data-driven static build.",
+  "scripts": {
+    "build": "node build.mjs",
+    "pdf": "node pdf.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.56.1"
+  }
+}
