@@ -459,6 +459,29 @@ body {
 .set-row.featured .set-price { font-size: 26px; color: #fff; }
 .set-badge { font-family: var(--sans-vi); font-size: 11px; font-weight: 600; letter-spacing: .1em; color: var(--gold-light); vertical-align: middle; }
 
+/* gift-box image placeholder (when no real box photo yet) */
+.box-placeholder {
+  width: 100%; height: 100%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;
+  background:
+    repeating-linear-gradient(45deg, rgba(176,134,46,.04) 0 1px, transparent 1px 22px),
+    #fbf6ea;
+  border: 2px dashed rgba(196,154,69,.7);
+  color: var(--gold-deep);
+}
+.box-placeholder .ph-mark {
+  width: 46px; height: 46px;
+  background: var(--red);
+  transform: rotate(45deg);
+  box-shadow: 0 0 0 6px rgba(196,154,69,.25), 0 0 0 8px rgba(196,154,69,.55);
+  margin-bottom: 6px;
+}
+.box-placeholder .ph-text {
+  font-family: var(--serif-vi); font-size: 22px; font-weight: 700; color: var(--red-deep); letter-spacing: .02em;
+}
+.cn .box-placeholder .ph-text { font-family: var(--serif-cn); }
+.box-placeholder .ph-sub { font-size: 13px; letter-spacing: .22em; text-transform: uppercase; color: var(--gold-deep); }
+
 /* ── Thank-you / cooperation page ───────────────────────────────────────── */
 .thanks-layout {
   position: absolute; inset: 31px;

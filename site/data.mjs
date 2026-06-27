@@ -603,7 +603,7 @@ export const gifts = [
     },
   },
   {
-    id: 'gift-duong-kieng', image: 'duongkieng-jar.webp',
+    id: 'gift-duong-kieng', image: null,
     vi: {
       title: 'Hộp Quà Đường Kiêng', titleSize: 42,
       subtitle: 'Hộp quà cao cấp · Lọ thủy tinh 70ml · Yến chưng sẵn',
@@ -634,7 +634,7 @@ export const gifts = [
     },
   },
   {
-    id: 'gift-yen-sam', image: 'yensam-dt-jar.webp',
+    id: 'gift-yen-sam', image: null,
     vi: {
       title: 'Hộp Quà Yến Sâm Đông Trùng', titleSize: 36,
       subtitle: 'Hộp quà cao cấp · Lọ thủy tinh 70ml · Yến chưng sẵn',
@@ -665,7 +665,7 @@ export const gifts = [
     },
   },
   {
-    id: 'gift-sam-kieng', image: 'yensam-dk-jar.webp',
+    id: 'gift-sam-kieng', image: null,
     vi: {
       title: 'Hộp Quà Sâm ĐT Đường Kiêng', titleSize: 32, titleMaxWidth: 420,
       subtitle: 'Hộp quà cao cấp · Lọ thủy tinh 75ml · Đường ăn kiêng Isomalt',

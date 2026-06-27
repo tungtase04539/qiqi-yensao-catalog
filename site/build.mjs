@@ -186,10 +186,13 @@ function giftPage(lang, g) {
           </div>`;
     })
     .join('\n          ');
+  const heroInner = g.image
+    ? `<img src="assets/${g.image}" alt="${attr(d.title)}">`
+    : `<div class="box-placeholder"><div class="ph-mark"></div><div class="ph-text">${esc(lang === 'cn' ? '礼盒图片' : 'Ảnh hộp quà')}</div><div class="ph-sub">${esc(lang === 'cn' ? '待更新' : 'chờ cập nhật')}</div></div>`;
   const body = `
     ${logo(lang)}
     <div class="layout">
-      <div class="gift-media"><div class="hero"><img src="assets/${g.image}" alt="${attr(d.title)}"></div></div>
+      <div class="gift-media"><div class="hero">${heroInner}</div></div>
       <div class="gift-info">
         <div>
           <div class="kicker">${esc(L.kicker)}</div>
