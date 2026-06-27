@@ -46,7 +46,8 @@
   .lang button:hover{border-color:var(--gold-l);}
 
   main{flex:1; display:flex; align-items:center; justify-content:center; padding:14px; min-height:0;}
-  #flip{ touch-action: pan-y; }
+  .bookwrap{ width:min(94vw, 820px); margin:0 auto; }
+  #flip{ touch-action: pan-y; min-width:0 !important; }
   #flip .page-img{ /* StPageFlip wraps images */ }
   .stPage{ background:#F7F1E3; }
 
@@ -86,18 +87,18 @@
     </div>
   </header>
 
-  <main><div id="flip"></div></main>
+  <main><div class="bookwrap"><div id="flip"></div></div></main>
 
   <footer>
     <div class="nav" onclick="book && book.flipPrev()" aria-label="Trang trước">‹</div>
-    <div class="counter">Trang <b id="cur">1</b> / <span id="total">23</span></div>
+    <div class="counter">Trang <b id="cur">1</b> / <span id="total">20</span></div>
     <div class="nav" onclick="book && book.flipNext()" aria-label="Trang sau">›</div>
   </footer>
   <div class="hint" id="hint">Kéo mép trang hoặc bấm ‹ › để lật</div>
 
   <script src="lib/page-flip.browser.js"></script>
   <script>
-    var PAGES = { vi: 23, cn: 23 };
+    var PAGES = { vi: 20, cn: 20 };
     var SUBTITLE = { vi: 'CATALOG · BÁO GIÁ', cn: '产品目录 · 报价单' };
     var HINT = { vi: 'Kéo mép trang hoặc bấm ‹ › để lật', cn: '拖动书页边缘或点击 ‹ › 翻页' };
     var book = null, currentLang = 'vi';
@@ -128,8 +129,11 @@
       book = new St.PageFlip(holder, {
         width: 1123, height: 794,
         size: 'stretch',
-        minWidth: 280, maxWidth: 1400,
-        minHeight: 198, maxHeight: 990,
+        // Force single-page (portrait) always: orientation goes portrait when
+        // container width < 2*minWidth. The big minWidth is neutralised for
+        // layout by `#flip{min-width:0!important}`, so it only flips the mode.
+        minWidth: 900, maxWidth: 1123,
+        minHeight: 198, maxHeight: 794,
         drawShadow: true, maxShadowOpacity: 0.5,
         flippingTime: 750, usePortrait: true, autoSize: true,
         showCover: false, mobileScrollSupport: false, swipeDistance: 25,

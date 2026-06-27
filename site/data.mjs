@@ -190,7 +190,7 @@ export const products = [
   },
   {
     id: 'yen-tinh-che',
-    media: { type: 'gallery', hero: 'tinhche-giftbox2.jpg', thumbs: [{ img: 'tinhche-plate.jpg' }, { img: 'tinhche-giftbox1.jpg', pos: 'center 30%' }] },
+    media: { type: 'gallery', hero: 'tinhche-box.jpg', thumbs: [{ img: 'tinhche-plate.jpg' }, { img: 'tinhche-giftbox1.jpg', pos: 'center 30%' }] },
     vi: {
       kicker: 'SẢN PHẨM 02 · YẾN TINH CHẾ',
       title: 'Yến Tinh Chế', titleSize: 46,
@@ -723,87 +723,6 @@ export const gifts = [
         { name: '6 瓶装', sub: '6 瓶 × 150ml', price: '720.000 ₫' },
         { name: '8 瓶装', sub: '8 瓶 × 150ml', price: '960.000 ₫' },
         { name: '10 瓶装', sub: '10 瓶 × 150ml', price: '1.200.000 ₫', featured: true },
-      ],
-    },
-  },
-  {
-    id: 'gift-yen-tho', image: 'yentho-3.jpg',
-    vi: {
-      title: 'Hộp Quà Yến Thô', titleSize: 44,
-      subtitle: 'Hộp quà cao cấp · Yến sào nguyên bản · Tịnh khối tổ yến khô',
-      nutrition: [
-        { v: '≥ 48%', l: 'Hàm lượng Protein' }, { v: '44–52 g', l: 'Acid Amin / 100g' },
-        { v: '≥ 5,0%', l: 'Sialic Acid' }, { v: '≤ 20%', l: 'Độ ẩm đạt chuẩn' },
-      ],
-      unitNote: 'Đơn giá lẻ 2.800.000₫/100g',
-      sets: [
-        { name: 'Hộp 100g', sub: 'Tổ yến khô 100g', price: '2.800.000 ₫', featured: true },
-      ],
-    },
-    cn: {
-      title: '原盏燕窝礼盒', titleSize: 44,
-      subtitle: '高档礼盒 · 天然原盏 · 干燕窝净重',
-      nutrition: [
-        { v: '≥ 48%', l: '蛋白质含量' }, { v: '44–52 g', l: '氨基酸 / 100g' },
-        { v: '≥ 5,0%', l: '唾液酸' }, { v: '≤ 20%', l: '标准水分' },
-      ],
-      unitNote: '零售单价 2.800.000₫/100g',
-      sets: [
-        { name: '100g 礼盒', sub: '干燕窝 100g', price: '2.800.000 ₫', featured: true },
-      ],
-    },
-  },
-  {
-    id: 'gift-tinh-che', image: 'gift-tinhche.jpg',
-    vi: {
-      title: 'Hộp Quà Yến Tinh Chế', titleSize: 42, titleMaxWidth: 430,
-      subtitle: 'Hộp quà cao cấp · Yến sào đã làm sạch · Tịnh khối tổ yến khô',
-      nutrition: [
-        { v: '≥ 40%', l: 'Protein (tới 54,8%)' }, { v: '46–50 g', l: 'Acid Amin / 100g' },
-        { v: '≥ 5,0%', l: 'Sialic Acid' }, { v: '≤ 15%', l: 'Độ ẩm (sấy lạnh)' },
-      ],
-      unitNote: 'Đơn giá lẻ 3.800.000₫/100g',
-      sets: [
-        { name: 'Hộp 100g', sub: 'Tổ yến khô 100g', price: '3.800.000 ₫', featured: true },
-      ],
-    },
-    cn: {
-      title: '精制燕窝礼盒', titleSize: 44,
-      subtitle: '高档礼盒 · 已清洗燕窝 · 干燕窝净重',
-      nutrition: [
-        { v: '≥ 40%', l: '蛋白质(高达54.8%)' }, { v: '46–50 g', l: '氨基酸 / 100g' },
-        { v: '≥ 5,0%', l: '唾液酸' }, { v: '≤ 15%', l: '水分(低温冷干)' },
-      ],
-      unitNote: '零售单价 3.800.000₫/100g',
-      sets: [
-        { name: '100g 礼盒', sub: '干燕窝 100g', price: '3.800.000 ₫', featured: true },
-      ],
-    },
-  },
-  {
-    id: 'gift-rut-long', image: 'tinhche-giftbox1.jpg',
-    vi: {
-      title: 'Hộp Quà Yến Rút Lông Nước', titleSize: 36, titleMaxWidth: 430,
-      subtitle: 'Hộp quà cao cấp · Yến rút lông sạch · Tịnh khối tổ yến khô',
-      nutrition: [
-        { v: '≥ 40%', l: 'Hàm lượng Protein' }, { v: '46–50 g', l: 'Acid Amin / 100g' },
-        { v: '≥ 5,0%', l: 'Sialic Acid' }, { v: '≤ 15%', l: 'Độ ẩm đạt chuẩn' },
-      ],
-      unitNote: 'Đơn giá lẻ 4.300.000₫/100g',
-      sets: [
-        { name: 'Hộp 100g', sub: 'Tổ yến khô 100g', price: '4.300.000 ₫', featured: true },
-      ],
-    },
-    cn: {
-      title: '水拔毛燕窝礼盒', titleSize: 42,
-      subtitle: '高档礼盒 · 水拔毛燕窝 · 干燕窝净重',
-      nutrition: [
-        { v: '≥ 40%', l: '蛋白质含量' }, { v: '46–50 g', l: '氨基酸 / 100g' },
-        { v: '≥ 5,0%', l: '唾液酸' }, { v: '≤ 15%', l: '标准水分' },
-      ],
-      unitNote: '零售单价 4.300.000₫/100g',
-      sets: [
-        { name: '100g 礼盒', sub: '干燕窝 100g', price: '4.300.000 ₫', featured: true },
       ],
     },
   },
