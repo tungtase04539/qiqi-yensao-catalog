@@ -601,7 +601,7 @@ export const gifts = [
     },
   },
   {
-    id: 'gift-duong-kieng', image: null,
+    id: 'gift-duong-kieng', image: 'gift-duongkieng.jpg',
     vi: {
       title: 'Hộp Quà Đường Kiêng', titleSize: 42,
       subtitle: 'Hộp quà cao cấp · Lọ thủy tinh 70ml · Yến chưng sẵn',
