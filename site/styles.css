@@ -36,6 +36,7 @@ html, body { margin: 0; }
 body {
   background: #2a2622;
   font-family: var(--sans-vi);
+  overflow-x: hidden;
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
 }
@@ -47,6 +48,20 @@ body {
   align-items: center;
   gap: 28px;
   padding: 40px 20px;
+}
+
+/* Responsive scaler: each A4 page scales down to fit narrow screens (phones),
+   while the reserved box shrinks with it so there's no horizontal overflow.
+   --s is set by a small script in the page (1 on wide screens). */
+.sheet {
+  width: calc(1123px * var(--s, 1));
+  height: calc(794px * var(--s, 1));
+  margin: 0 auto;
+  flex: none;
+}
+.sheet > .page {
+  transform: scale(var(--s, 1));
+  transform-origin: top left;
 }
 
 /* ── Page frame ─────────────────────────────────────────────────────────── */
@@ -537,13 +552,16 @@ body {
 @page { size: A4 landscape; margin: 0; }
 
 @media print {
+  :root { --s: 1 !important; }
   body { background: #fff; }
   .deck { display: block; padding: 0; gap: 0; }
-  .page {
-    box-shadow: none;
+  .sheet {
+    width: auto !important;
+    height: auto !important;
+    margin: 0 !important;
     break-after: page;
     page-break-after: always;
-    margin: 0 auto;
   }
-  .page:last-child { break-after: auto; page-break-after: auto; }
+  .sheet:last-child { break-after: auto; page-break-after: auto; }
+  .sheet > .page { transform: none !important; box-shadow: none; }
 }

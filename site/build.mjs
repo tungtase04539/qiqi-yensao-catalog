@@ -11,7 +11,7 @@ const logo = (lang) => `<img class="corner-logo" src="assets/logo-corner.webp" a
 const footer = (lang) => `<div class="footer">${esc(site.productFooter[lang])}</div>`;
 
 const page = (lang, kind, body) =>
-  `<section class="page${lang === 'cn' ? ' cn' : ''}" data-kind="${kind}" data-lang="${lang}">\n${corners}\n${body}\n</section>`;
+  `<div class="sheet"><section class="page${lang === 'cn' ? ' cn' : ''}" data-kind="${kind}" data-lang="${lang}">\n${corners}\n${body}\n</section></div>`;
 
 const nutritionGrid = (items) =>
   `<div class="nutrition">${items
@@ -269,6 +269,17 @@ const html = `<!DOCTYPE html>
 <main class="deck">
 ${allPages.join('\n')}
 </main>
+<script>
+(function () {
+  var W = 1123;
+  function fit() {
+    var avail = document.documentElement.clientWidth - 12;
+    document.documentElement.style.setProperty('--s', Math.min(1, avail / W));
+  }
+  window.addEventListener('resize', fit);
+  fit();
+})();
+</script>
 </body>
 </html>
 `;

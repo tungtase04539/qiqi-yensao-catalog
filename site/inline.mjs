@@ -11,6 +11,10 @@ execSync('node build.mjs', { cwd: here, stdio: 'inherit' });
 
 let html = readFileSync(join(here, 'index.html'), 'utf8');
 
+// Inline the stylesheet so the file is truly self-contained.
+const css = readFileSync(join(here, 'styles.css'), 'utf8');
+html = html.replace(/<link rel="stylesheet" href="styles\.css">/, `<style>\n${css}\n</style>`);
+
 // Inline every assets/* reference as a base64 data URI.
 const cache = new Map();
 html = html.replace(/(src|href)="assets\/([^"]+)"/g, (m, attr, file) => {
@@ -30,7 +34,7 @@ html = html.replace(/(src|href)="assets\/([^"]+)"/g, (m, attr, file) => {
 const head = html.slice(0, html.indexOf('<main'));
 const tail = html.slice(html.indexOf('</main>'));
 const mainOpen = '<main class="deck">';
-const sections = html.match(/<section[\s\S]*?<\/section>/g) || [];
+const sections = html.match(/<div class="sheet">[\s\S]*?<\/section><\/div>/g) || [];
 for (const lang of ['vi', 'cn']) {
   const picked = sections.filter((s) => s.includes(`data-lang="${lang}"`)).join('\n');
   const doc = head + mainOpen + '\n' + picked + '\n' + tail;
