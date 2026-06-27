@@ -93,14 +93,14 @@
 
   <footer>
     <div class="nav" onclick="book && book.flipPrev()" aria-label="Trang trước">‹</div>
-    <div class="counter">Trang <b id="cur">1</b> / <span id="total">20</span></div>
+    <div class="counter">Trang <b id="cur">1</b> / <span id="total">21</span></div>
     <div class="nav" onclick="book && book.flipNext()" aria-label="Trang sau">›</div>
   </footer>
   <div class="hint" id="hint">Kéo mép trang hoặc bấm ‹ › để lật</div>
 
   <script src="lib/page-flip.browser.js"></script>
   <script>
-    var PAGES = { vi: 20, cn: 20 };
+    var PAGES = { vi: 21, cn: 21 };
     var SUBTITLE = { vi: 'CATALOG · BÁO GIÁ', cn: '产品目录 · 报价单' };
     var HINT = { vi: 'Kéo mép trang hoặc bấm ‹ › để lật', cn: '拖动书页边缘或点击 ‹ › 翻页' };
     var book = null, currentLang = 'vi', booksLoaded = false;
