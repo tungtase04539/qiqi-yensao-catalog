@@ -525,8 +525,8 @@ html.preloading .deck { opacity: 0; }
   display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
 }
 .thanks-seal {
-  position: relative; width: 150px; height: 150px;
-  display: flex; align-items: center; justify-content: center; margin-bottom: 16px;
+  position: relative; width: 190px; height: 190px;
+  display: flex; align-items: center; justify-content: center; margin-bottom: 18px;
 }
 .thanks-seal .disc {
   position: absolute; inset: 0; border-radius: 50%;
@@ -535,7 +535,7 @@ html.preloading .deck { opacity: 0; }
   box-shadow: 0 14px 34px rgba(142,20,28,.30);
 }
 .thanks-seal .disc-inner { position: absolute; inset: 9px; border-radius: 50%; border: 1px solid rgba(231,204,132,.72); }
-.thanks-seal img { width: 98px; height: 98px; object-fit: contain; position: relative; filter: drop-shadow(0 3px 8px rgba(0,0,0,.28)); }
+.thanks-seal img { width: 126px; height: 126px; object-fit: contain; position: relative; filter: drop-shadow(0 3px 8px rgba(0,0,0,.28)); }
 
 .thanks-kicker { font-size: 14px; letter-spacing: .36em; font-weight: 600; color: var(--gold-deep); }
 .cn .thanks-kicker { letter-spacing: .3em; font-weight: 500; }
