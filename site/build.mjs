@@ -264,6 +264,7 @@ const html = `<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700&family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<script>document.documentElement.className += ' preloading';</script>
 </head>
 <body>
 <div id="loader"><div class="ring"></div><div class="ld-text">QiQi Yến Sào</div></div>
@@ -287,9 +288,9 @@ ${allPages.join('\n')}
   function reveal() {
     if (revealed) return;
     revealed = true;
-    document.body.classList.add('ready');
+    document.documentElement.classList.remove('preloading');
   }
-  setTimeout(reveal, 3500);            // absolute fallback — never spin forever
+  setTimeout(reveal, 3000);            // absolute fallback — never spin forever
   window.addEventListener('load', reveal);
   function waitImages() {
     var imgs = Array.prototype.slice.call(document.images);
