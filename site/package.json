@@ -7,7 +7,8 @@
   "scripts": {
     "build": "node build.mjs",
     "pdf": "node pdf.mjs",
-    "inline": "node inline.mjs"
+    "inline": "node inline.mjs",
+    "pages": "node pages.mjs"
   },
   "devDependencies": {
     "playwright": "^1.56.1",

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>QiQi Yến Sào · Catalog Báo Giá / 报价单</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Serif+SC:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="lib/stPageFlip.css">
+<style>
+  :root{
+    --red:#8E141C; --red2:#A3161B; --gold:#C49A45; --gold-l:#E8C45A; --cream:#F7F1E3; --ink:#2a2622;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;height:100%;}
+  body{
+    background:
+      radial-gradient(1200px 600px at 50% -10%, #3a2d22 0%, transparent 60%),
+      linear-gradient(180deg,#241c16,#15110d);
+    color:#f3e7c9; font-family:'Be Vietnam Pro',system-ui,sans-serif;
+    display:flex; flex-direction:column; min-height:100%;
+    overflow:hidden;
+  }
+  header{
+    flex:none; display:flex; align-items:center; justify-content:space-between;
+    gap:12px; padding:12px 18px;
+    border-bottom:1px solid rgba(196,154,69,.25);
+  }
+  .brand{display:flex; align-items:center; gap:12px; min-width:0;}
+  .brand .mark{
+    width:38px;height:38px;border-radius:50%;flex:none;
+    background:radial-gradient(120% 120% at 50% 26%,#A8181F,#74101A);
+    border:2px solid var(--gold); display:flex;align-items:center;justify-content:center;
+  }
+  .brand .mark img{width:26px;height:26px;object-fit:contain;}
+  .brand .t1{font-family:'Playfair Display',serif;font-weight:800;font-size:18px;color:var(--gold-l);line-height:1;}
+  .brand .t2{font-size:11px;letter-spacing:.18em;color:#caa86a;margin-top:3px;}
+  .lang{display:flex;gap:6px;flex:none;}
+  .lang button{
+    font:600 13px/1 'Be Vietnam Pro',sans-serif; letter-spacing:.04em;
+    color:#e9d6ae; background:transparent; border:1px solid rgba(196,154,69,.5);
+    padding:8px 14px; border-radius:999px; cursor:pointer; transition:.2s;
+  }
+  .lang button.active{background:var(--gold); color:#3a2410; border-color:var(--gold);}
+  .lang button:hover{border-color:var(--gold-l);}
+
+  main{flex:1; display:flex; align-items:center; justify-content:center; padding:14px; min-height:0;}
+  #flip{ touch-action: pan-y; }
+  #flip .page-img{ /* StPageFlip wraps images */ }
+  .stPage{ background:#F7F1E3; }
+
+  footer{
+    flex:none; display:flex; align-items:center; justify-content:center; gap:18px;
+    padding:12px 18px 18px; user-select:none;
+  }
+  .nav{
+    width:46px;height:46px;border-radius:50%;cursor:pointer;flex:none;
+    background:rgba(196,154,69,.12); border:1px solid rgba(196,154,69,.55); color:var(--gold-l);
+    font-size:20px; display:flex;align-items:center;justify-content:center; transition:.2s;
+  }
+  .nav:hover{background:var(--gold); color:#3a2410;}
+  .nav:active{transform:scale(.94);}
+  .counter{font-size:14px;letter-spacing:.06em;color:#d9c79c;min-width:96px;text-align:center;font-variant-numeric:tabular-nums;}
+  .counter b{color:var(--gold-l);font-weight:700;}
+  .hint{position:fixed;left:0;right:0;bottom:74px;text-align:center;font-size:12px;color:#a98f5e;pointer-events:none;opacity:.85;}
+  @media (max-width:560px){
+    .brand .t1{font-size:15px;} .brand .t2{display:none;}
+    .nav{width:42px;height:42px;}
+    header{padding:10px 12px;}
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="mark"><img src="lib/logo-mark.webp" alt="QiQi"></div>
+      <div>
+        <div class="t1">QiQi Yến Sào</div>
+        <div class="t2" id="subtitle">CATALOG · BÁO GIÁ</div>
+      </div>
+    </div>
+    <div class="lang">
+      <button id="btn-vi" class="active" onclick="setLang('vi')">Tiếng Việt</button>
+      <button id="btn-cn" onclick="setLang('cn')">中文</button>
+    </div>
+  </header>
+
+  <main><div id="flip"></div></main>
+
+  <footer>
+    <div class="nav" onclick="book && book.flipPrev()" aria-label="Trang trước">‹</div>
+    <div class="counter">Trang <b id="cur">1</b> / <span id="total">23</span></div>
+    <div class="nav" onclick="book && book.flipNext()" aria-label="Trang sau">›</div>
+  </footer>
+  <div class="hint" id="hint">Kéo mép trang hoặc bấm ‹ › để lật</div>
+
+  <script src="lib/page-flip.browser.js"></script>
+  <script>
+    var PAGES = { vi: 23, cn: 23 };
+    var SUBTITLE = { vi: 'CATALOG · BÁO GIÁ', cn: '产品目录 · 报价单' };
+    var HINT = { vi: 'Kéo mép trang hoặc bấm ‹ › để lật', cn: '拖动书页边缘或点击 ‹ › 翻页' };
+    var book = null, currentLang = 'vi';
+
+    function imgs(lang){
+      var arr = [];
+      for (var i = 1; i <= PAGES[lang]; i++) arr.push('pages/' + lang + '/' + String(i).padStart(2,'0') + '.jpg');
+      return arr;
+    }
+    function setCounter(idx){
+      // In two-page (landscape) mode StPageFlip reports the left page index.
+      document.getElementById('cur').textContent = Math.min(idx + 1, PAGES[currentLang]);
+    }
+    function setLang(lang){
+      currentLang = lang;
+      document.documentElement.lang = lang === 'cn' ? 'zh' : 'vi';
+      document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+      document.getElementById('btn-cn').classList.toggle('active', lang === 'cn');
+      document.getElementById('subtitle').textContent = SUBTITLE[lang];
+      document.getElementById('hint').textContent = HINT[lang];
+      document.getElementById('total').textContent = PAGES[lang];
+      build();
+    }
+    function build(){
+      var holder = document.getElementById('flip');
+      if (book){ try { book.destroy(); } catch(e){} }
+      holder.innerHTML = '';
+      book = new St.PageFlip(holder, {
+        width: 1123, height: 794,
+        size: 'stretch',
+        minWidth: 280, maxWidth: 1400,
+        minHeight: 198, maxHeight: 990,
+        drawShadow: true, maxShadowOpacity: 0.5,
+        flippingTime: 750, usePortrait: true, autoSize: true,
+        showCover: false, mobileScrollSupport: false, swipeDistance: 25,
+        clickEventForward: true, useMouseEvents: true,
+      });
+      book.loadFromImages(imgs(currentLang));
+      setCounter(0);
+      book.on('flip', function(e){ setCounter(e.data); });
+    }
+    document.addEventListener('keydown', function(e){
+      if (!book) return;
+      if (e.key === 'ArrowLeft') book.flipPrev();
+      else if (e.key === 'ArrowRight') book.flipNext();
+    });
+    window.addEventListener('load', build);
+    window.addEventListener('resize', function(){
+      // StPageFlip autoSize handles width; update on orientation change just in case.
+    });
+  </script>
+</body>
+</html>

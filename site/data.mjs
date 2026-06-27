@@ -148,7 +148,7 @@ export const products = [
   },
   {
     id: 'yen-rut-long',
-    media: { type: 'gallery', hero: 'tinhche-giftbox1.jpg', heroPos: 'center 58%', thumbs: [{ img: 'tinhche-plate.jpg' }, { img: 'tinhche-giftbox2.jpg' }] },
+    media: { type: 'gallery', hero: 'rutlong-box.jpg', thumbs: [{ img: 'tinhche-plate.jpg' }, { img: 'tinhche-giftbox2.jpg' }] },
     vi: {
       kicker: 'SẢN PHẨM 02 · YẾN TINH CHẾ',
       title: 'Yến Rút Lông Nước', titleSize: 43,
