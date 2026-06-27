@@ -499,7 +499,7 @@ body {
   box-shadow: 0 14px 34px rgba(142,20,28,.30);
 }
 .thanks-seal .disc-inner { position: absolute; inset: 9px; border-radius: 50%; border: 1px solid rgba(231,204,132,.72); }
-.thanks-seal img { width: 92px; height: 92px; object-fit: contain; position: relative; filter: drop-shadow(0 3px 8px rgba(0,0,0,.28)); }
+.thanks-seal img { width: 98px; height: 98px; object-fit: contain; position: relative; filter: drop-shadow(0 3px 8px rgba(0,0,0,.28)); }
 
 .thanks-kicker { font-size: 14px; letter-spacing: .36em; font-weight: 600; color: var(--gold-deep); }
 .cn .thanks-kicker { letter-spacing: .3em; font-weight: 500; }

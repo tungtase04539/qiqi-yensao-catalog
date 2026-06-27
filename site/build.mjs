@@ -221,7 +221,7 @@ function thanksPage(lang) {
   // No corner logo here — the centered seal medallion already carries the brand.
   const body = `
     <div class="thanks-layout">
-      <div class="thanks-seal"><div class="disc"></div><div class="disc-inner"></div><img src="assets/logo-mark.png" alt="${attr('QiQi Yến')}"></div>
+      <div class="thanks-seal"><div class="disc"></div><div class="disc-inner"></div><img src="assets/logo2.png" alt="${attr('QiQi Yến')}"></div>
       <div class="thanks-kicker">${esc(t.kicker)}</div>
       <div class="thanks-title">${esc(t.title)}</div>
       <div class="thanks-subtitle">${esc(t.subtitle)}</div>
