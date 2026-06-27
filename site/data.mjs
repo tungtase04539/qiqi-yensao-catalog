@@ -635,7 +635,7 @@ export const gifts = [
       title: 'Hộp Quà Yến Sâm Đông Trùng', titleSize: 36,
       subtitle: 'Hộp quà cao cấp · Lọ thủy tinh 70ml · Yến chưng sẵn',
       nutrition: [
-        { v: '35%', l: 'Hàm lượng tổ yến' }, { v: '2%', l: 'Đông trùng hạ thảo' },
+        { v: '2g', l: 'Hàm lượng tổ yến' }, { v: '2%', l: 'Đông trùng hạ thảo' },
         { v: '1%', l: 'Hồng sâm thật' }, { v: '0g', l: 'Chất béo' },
       ],
       unitNote: 'Đơn giá lẻ 33.000₫/hũ',
@@ -648,7 +648,7 @@ export const gifts = [
       title: '燕窝参虫草礼盒', titleSize: 42,
       subtitle: '高档礼盒 · 玻璃瓶 70ml · 即食燕窝',
       nutrition: [
-        { v: '35%', l: '燕窝含量' }, { v: '2%', l: '冬虫夏草' },
+        { v: '2g', l: '燕窝含量' }, { v: '2%', l: '冬虫夏草' },
         { v: '1%', l: '真红参' }, { v: '0g', l: '脂肪' },
       ],
       unitNote: '零售单价 33.000₫/瓶',
