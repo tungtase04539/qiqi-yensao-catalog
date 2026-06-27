@@ -67,9 +67,9 @@ export const intro = {
     footer: '福盛贸易投资发展有限公司  ·  QiQi 燕窝  ·  税号 0202247835  ·  qiqiyensao.com',
   },
   certs: [
-    { img: 'cert-fda.webp', w: 226, boxW: 238, vi: 'Chứng nhận FDA (Hoa Kỳ)', cn: '美国 FDA 注册认证' },
-    { img: 'cert-top10.webp', w: 206, boxW: 218, vi: 'Top 10 Thương hiệu Uy tín Quốc gia 2024', cn: '2024 年越南国家信誉十大品牌' },
-    { img: 'cert-cn.webp', w: 205, boxW: 217, vi: 'Chứng nhận chất lượng (Trung Quốc)', cn: '中国产品质量检验报告' },
+    { img: 'cert-fda.jpg', w: 226, boxW: 238, vi: 'Chứng nhận FDA (Hoa Kỳ)', cn: '美国 FDA 注册认证' },
+    { img: 'cert-top10.jpg', w: 206, boxW: 218, vi: 'Top 10 Thương hiệu Uy tín Quốc gia 2024', cn: '2024 年越南国家信誉十大品牌' },
+    { img: 'cert-cn.jpg', w: 205, boxW: 217, vi: 'Chứng nhận chất lượng (Trung Quốc)', cn: '中国产品质量检验报告' },
   ],
 };
 
@@ -106,7 +106,7 @@ export const toc = {
 export const products = [
   {
     id: 'yen-tho',
-    media: { type: 'gallery', hero: 'yentho-3.webp', thumbs: [{ img: 'yentho-1.webp' }, { img: 'yentho-2.webp' }] },
+    media: { type: 'gallery', hero: 'yentho-3.jpg', thumbs: [{ img: 'yentho-1.jpg' }, { img: 'yentho-2.jpg' }] },
     vi: {
       kicker: 'SẢN PHẨM 01 · YẾN SÀO NGUYÊN BẢN',
       title: 'Yến Thô', titleSize: 46,
@@ -148,7 +148,7 @@ export const products = [
   },
   {
     id: 'yen-rut-long',
-    media: { type: 'gallery', hero: 'tinhche-giftbox1.webp', heroPos: 'center 58%', thumbs: [{ img: 'tinhche-plate.webp' }, { img: 'tinhche-giftbox2.webp' }] },
+    media: { type: 'gallery', hero: 'tinhche-giftbox1.jpg', heroPos: 'center 58%', thumbs: [{ img: 'tinhche-plate.jpg' }, { img: 'tinhche-giftbox2.jpg' }] },
     vi: {
       kicker: 'SẢN PHẨM 02 · YẾN TINH CHẾ',
       title: 'Yến Rút Lông Nước', titleSize: 43,
@@ -190,7 +190,7 @@ export const products = [
   },
   {
     id: 'yen-tinh-che',
-    media: { type: 'gallery', hero: 'tinhche-giftbox2.webp', thumbs: [{ img: 'tinhche-plate.webp' }, { img: 'tinhche-giftbox1.webp', pos: 'center 30%' }] },
+    media: { type: 'gallery', hero: 'tinhche-giftbox2.jpg', thumbs: [{ img: 'tinhche-plate.jpg' }, { img: 'tinhche-giftbox1.jpg', pos: 'center 30%' }] },
     vi: {
       kicker: 'SẢN PHẨM 02 · YẾN TINH CHẾ',
       title: 'Yến Tinh Chế', titleSize: 46,
@@ -232,7 +232,7 @@ export const products = [
   },
   {
     id: 'yen-sam-duong-kieng',
-    media: { type: 'single', img: 'yensam-dk-jar.webp' },
+    media: { type: 'single', img: 'yensam-dk-jar.jpg' },
     vi: {
       kicker: 'SẢN PHẨM 03 · YẾN CHƯNG SẴN',
       title: 'Yến Sâm Đông Trùng Đường Kiêng', titleSize: 35,
@@ -274,7 +274,7 @@ export const products = [
   },
   {
     id: 'hoang-yen',
-    media: { type: 'single', img: 'hoangyen-jar.webp' },
+    media: { type: 'single', img: 'hoangyen-jar.jpg' },
     vi: {
       kicker: 'SẢN PHẨM 03 · YẾN CHƯNG SẴN',
       title: 'Hoàng Yến Đông Trùng', titleSize: 41,
@@ -316,7 +316,7 @@ export const products = [
   },
   {
     id: 'duong-kieng',
-    media: { type: 'single', img: 'duongkieng-jar.webp' },
+    media: { type: 'single', img: 'duongkieng-jar.jpg' },
     vi: {
       kicker: 'SẢN PHẨM 03 · YẾN CHƯNG SẴN',
       title: 'Yến Chưng Đường Kiêng', titleSize: 42,
@@ -358,7 +358,7 @@ export const products = [
   },
   {
     id: 'duong-phen',
-    media: { type: 'single', img: 'duongphen-jar.webp' },
+    media: { type: 'single', img: 'duongphen-jar.jpg' },
     vi: {
       kicker: 'SẢN PHẨM 03 · YẾN CHƯNG SẴN',
       title: 'Yến Chưng Đường Phèn', titleSize: 42,
@@ -400,7 +400,7 @@ export const products = [
   },
   {
     id: 'yen-sam-dt',
-    media: { type: 'single', img: 'yensam-dt-jar.webp' },
+    media: { type: 'single', img: 'yensam-dt-jar.jpg' },
     vi: {
       kicker: 'SẢN PHẨM 03 · YẾN CHƯNG SẴN',
       title: 'Yến Sâm Đông Trùng', titleSize: 42,
@@ -442,7 +442,7 @@ export const products = [
   },
   {
     id: 'duong-phen-150',
-    media: { type: 'single', img: 'duongphen-150-jar.webp' },
+    media: { type: 'single', img: 'duongphen-150-jar.jpg' },
     vi: {
       kicker: 'SẢN PHẨM 03 · YẾN CHƯNG SẴN',
       title: 'Yến Chưng Đường Phèn 150ml', titleSize: 33,
@@ -484,7 +484,7 @@ export const products = [
   },
   {
     id: 'yen-sam-dk-150',
-    media: { type: 'single', img: 'yensam-dk-150-jar.webp' },
+    media: { type: 'single', img: 'yensam-dk-150-jar.jpg' },
     vi: {
       kicker: 'SẢN PHẨM 03 · YẾN CHƯNG SẴN',
       title: 'Yến Sâm Đông Trùng Đường Kiêng 150ml', titleSize: 28,
@@ -526,7 +526,7 @@ export const products = [
   },
   {
     id: 'yen-chung-dt',
-    media: { type: 'single', img: 'yenchung-dongtrung-jar.webp' },
+    media: { type: 'single', img: 'yenchung-dongtrung-jar.jpg' },
     vi: {
       kicker: 'SẢN PHẨM 03 · YẾN CHƯNG SẴN',
       title: 'Yến Chưng Đông Trùng Hạ Thảo', titleSize: 33,
@@ -572,7 +572,7 @@ export const products = [
 // image reuses the matching product's photo (no box photos were provided).
 export const gifts = [
   {
-    id: 'gift-duong-phen', image: 'gift-duongphen.webp',
+    id: 'gift-duong-phen', image: 'gift-duongphen.jpg',
     vi: {
       title: 'Hộp Quà Đường Phèn', titleSize: 42,
       subtitle: 'Hộp quà cao cấp · Lọ thủy tinh 70ml · Yến chưng sẵn',
@@ -696,7 +696,7 @@ export const gifts = [
     },
   },
   {
-    id: 'gift-hoang-yen', image: 'gift-hoangyen.webp',
+    id: 'gift-hoang-yen', image: 'gift-hoangyen.jpg',
     vi: {
       title: 'Hộp Quà Hoàng Yến Đông Trùng', titleSize: 34,
       subtitle: 'Hộp quà cao cấp · Lọ thủy tinh 150ml · Yến chưng sẵn',
@@ -727,7 +727,7 @@ export const gifts = [
     },
   },
   {
-    id: 'gift-yen-tho', image: 'yentho-3.webp',
+    id: 'gift-yen-tho', image: 'yentho-3.jpg',
     vi: {
       title: 'Hộp Quà Yến Thô', titleSize: 44,
       subtitle: 'Hộp quà cao cấp · Yến sào nguyên bản · Tịnh khối tổ yến khô',
@@ -754,7 +754,7 @@ export const gifts = [
     },
   },
   {
-    id: 'gift-tinh-che', image: 'gift-tinhche.webp',
+    id: 'gift-tinh-che', image: 'gift-tinhche.jpg',
     vi: {
       title: 'Hộp Quà Yến Tinh Chế', titleSize: 42, titleMaxWidth: 430,
       subtitle: 'Hộp quà cao cấp · Yến sào đã làm sạch · Tịnh khối tổ yến khô',
@@ -781,7 +781,7 @@ export const gifts = [
     },
   },
   {
-    id: 'gift-rut-long', image: 'tinhche-giftbox1.webp',
+    id: 'gift-rut-long', image: 'tinhche-giftbox1.jpg',
     vi: {
       title: 'Hộp Quà Yến Rút Lông Nước', titleSize: 36, titleMaxWidth: 430,
       subtitle: 'Hộp quà cao cấp · Yến rút lông sạch · Tịnh khối tổ yến khô',
