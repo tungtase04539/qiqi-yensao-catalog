@@ -534,7 +534,7 @@ export const products = [
       desc: 'Yến chưng với hàm lượng tổ yến lên đến 30%, kết hợp đông trùng hạ thảo và đường phèn thanh mát. Bồi bổ cơ thể, tăng cường sinh lực và nâng cao sức đề kháng — dùng trực tiếp tiện lợi, ngon hơn khi ướp lạnh.',
       nutriLabel: 'THÀNH PHẦN & DINH DƯỠNG',
       nutrition: [
-        { v: '30%', l: 'Hàm lượng tổ yến' }, { v: '~34 kcal', l: 'Năng lượng / 100g' },
+        { v: '2g', l: 'Hàm lượng tổ yến' }, { v: '~34 kcal', l: 'Năng lượng / 100g' },
         { v: '70ml', l: 'Thể tích thực' }, { v: '0g', l: 'Chất béo' },
       ],
       suitableLabel: 'PHÙ HỢP VỚI',
@@ -544,7 +544,7 @@ export const products = [
         'Quà biếu sức khỏe cho người thân và đối tác',
       ],
       specLabel: 'QUY CÁCH', spec: 'Lọ thủy tinh 70ml · Lốc 6 lọ',
-      priceLabel: 'ĐƠN GIÁ', price: 'Liên hệ',
+      priceLabel: 'ĐƠN GIÁ', price: '48.000 ₫', priceUnit: '/hũ',
     },
     cn: {
       kicker: '产品 03 · 即食燕窝',
@@ -553,7 +553,7 @@ export const products = [
       desc: '燕窝含量高达 30%，搭配冬虫夏草与清润冰糖。滋补身体、增强体力与免疫力，开瓶即食，冷藏后风味更佳。',
       nutriLabel: '成分与营养',
       nutrition: [
-        { v: '30%', l: '燕窝含量' }, { v: '~34 kcal', l: '热量 / 100g' },
+        { v: '2g', l: '燕窝含量' }, { v: '~34 kcal', l: '热量 / 100g' },
         { v: '70ml', l: '净含量' }, { v: '0g', l: '脂肪' },
       ],
       suitableLabel: '适合人群',
@@ -563,7 +563,7 @@ export const products = [
         '馈赠亲友与合作伙伴的健康好礼',
       ],
       specLabel: '规格', spec: '玻璃瓶 70ml · 6 瓶装',
-      priceLabel: '价格', price: '请联系',
+      priceLabel: '价格', price: '48.000 ₫', priceUnit: '/瓶',
     },
   },
 ];
