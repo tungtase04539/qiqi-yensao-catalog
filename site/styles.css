@@ -41,6 +41,24 @@ body {
   print-color-adjust: exact;
 }
 
+/* Load-once experience: hold the deck hidden behind a loader until every
+   image is decoded, then fade in — so scrolling never lazy-loads images. */
+#loader {
+  position: fixed; inset: 0; z-index: 9999;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px;
+  background: #2a2622; color: var(--gold-light);
+  font-family: var(--serif-vi); font-size: 20px; letter-spacing: .08em;
+}
+#loader .ring {
+  width: 48px; height: 48px; border-radius: 50%;
+  border: 3px solid rgba(232, 196, 90, .25); border-top-color: var(--gold-light);
+  animation: qiqi-spin 0.9s linear infinite;
+}
+@keyframes qiqi-spin { to { transform: rotate(360deg); } }
+.deck { opacity: 0; transition: opacity .45s ease; }
+body.ready .deck { opacity: 1; }
+body.ready #loader { display: none; }
+
 /* Screen: vertically stacked, centered deck. */
 .deck {
   display: flex;
@@ -554,7 +572,8 @@ body {
 @media print {
   :root { --s: 1 !important; }
   body { background: #fff; }
-  .deck { display: block; padding: 0; gap: 0; }
+  #loader { display: none !important; }
+  .deck { display: block; padding: 0; gap: 0; opacity: 1 !important; }
   .sheet {
     width: auto !important;
     height: auto !important;

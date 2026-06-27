@@ -266,6 +266,7 @@ const html = `<!DOCTYPE html>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<div id="loader"><div class="ring"></div><div class="ld-text">QiQi Yến Sào</div></div>
 <main class="deck">
 ${allPages.join('\n')}
 </main>
@@ -278,6 +279,17 @@ ${allPages.join('\n')}
   }
   window.addEventListener('resize', fit);
   fit();
+
+  // Preload + decode every image up front, then reveal — so once it's ready,
+  // scrolling shows everything instantly (no per-image lazy loading).
+  function reveal() { document.body.classList.add('ready'); }
+  window.addEventListener('load', function () {
+    var imgs = Array.prototype.slice.call(document.images);
+    Promise.all(imgs.map(function (im) {
+      return im.decode ? im.decode().catch(function () {}) : Promise.resolve();
+    })).then(reveal);
+    setTimeout(reveal, 8000); // safety fallback
+  });
 })();
 </script>
 </body>
