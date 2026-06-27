@@ -404,8 +404,8 @@ export const products = [
     vi: {
       kicker: 'SẢN PHẨM 03 · YẾN CHƯNG SẴN',
       title: 'Yến Chưng Đông Trùng Hạ Thảo', titleSize: 33,
-      subtitle: 'Hàm lượng tổ yến 30% · Đông trùng hạ thảo · Lọ 70ml',
-      desc: 'Yến chưng với hàm lượng tổ yến lên đến 30%, kết hợp đông trùng hạ thảo và đường phèn thanh mát. Bồi bổ cơ thể, tăng cường sinh lực và nâng cao sức đề kháng — dùng trực tiếp tiện lợi, ngon hơn khi ướp lạnh.',
+      subtitle: 'Hàm lượng tổ yến 2g · Đông trùng hạ thảo · Lọ 70ml',
+      desc: 'Yến chưng với hàm lượng tổ yến 2g, kết hợp đông trùng hạ thảo và đường phèn thanh mát. Bồi bổ cơ thể, tăng cường sinh lực và nâng cao sức đề kháng — dùng trực tiếp tiện lợi, ngon hơn khi ướp lạnh.',
       nutriLabel: 'THÀNH PHẦN & DINH DƯỠNG',
       nutrition: [
         { v: '2g', l: 'Hàm lượng tổ yến' }, { v: '~34 kcal', l: 'Năng lượng / 100g' },
@@ -418,13 +418,13 @@ export const products = [
         'Quà biếu sức khỏe cho người thân và đối tác',
       ],
       specLabel: 'QUY CÁCH', spec: 'Lọ thủy tinh 70ml · Lốc 6 lọ',
-      priceLabel: 'ĐƠN GIÁ', price: '48.000 ₫', priceUnit: '/hũ',
+      priceLabel: 'ĐƠN GIÁ', price: '30.000 ₫', priceUnit: '/hũ',
     },
     cn: {
       kicker: '产品 03 · 即食燕窝',
       title: '燕窝冬虫夏草', titleSize: 42,
-      subtitle: '燕窝含量 30% · 冬虫夏草 · 70ml',
-      desc: '燕窝含量高达 30%，搭配冬虫夏草与清润冰糖。滋补身体、增强体力与免疫力，开瓶即食，冷藏后风味更佳。',
+      subtitle: '燕窝含量 2g · 冬虫夏草 · 70ml',
+      desc: '燕窝含量 2g，搭配冬虫夏草与清润冰糖。滋补身体、增强体力与免疫力，开瓶即食，冷藏后风味更佳。',
       nutriLabel: '成分与营养',
       nutrition: [
         { v: '2g', l: '燕窝含量' }, { v: '~34 kcal', l: '热量 / 100g' },
@@ -437,7 +437,7 @@ export const products = [
         '馈赠亲友与合作伙伴的健康好礼',
       ],
       specLabel: '规格', spec: '玻璃瓶 70ml · 6 瓶装',
-      priceLabel: '价格', price: '48.000 ₫', priceUnit: '/瓶',
+      priceLabel: '价格', price: '30.000 ₫', priceUnit: '/瓶',
     },
   },
   {
