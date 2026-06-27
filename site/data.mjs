@@ -630,7 +630,7 @@ export const gifts = [
     },
   },
   {
-    id: 'gift-yen-sam', image: null,
+    id: 'gift-yen-sam', image: 'gift-yensam.jpg',
     vi: {
       title: 'Hộp Quà Yến Sâm Đông Trùng', titleSize: 36,
       subtitle: 'Hộp quà cao cấp · Lọ thủy tinh 70ml · Yến chưng sẵn',
