@@ -173,12 +173,12 @@ html.preloading .deck { opacity: 0; }
 }
 
 .desc {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.66;
   color: var(--ink);
   margin-top: 12px;
 }
-.cn .desc { font-size: 13.5px; line-height: 1.74; }
+.cn .desc { font-size: 14.5px; line-height: 1.74; }
 
 .section-label {
   font-size: 12px;
@@ -198,12 +198,12 @@ html.preloading .deck { opacity: 0; }
 .nutrient { border-left: 2px solid var(--gold); padding-left: 12px; }
 .nutrient .value {
   font-family: var(--num);
-  font-size: 23px;
+  font-size: 24px;
   font-weight: 800;
   color: var(--red);
   line-height: 1;
 }
-.nutrient .label { font-size: 12px; color: var(--muted); margin-top: 3px; }
+.nutrient .label { font-size: 12.5px; color: var(--muted); margin-top: 3px; }
 
 /* suitable-for list */
 .suitable { display: flex; flex-direction: column; gap: 7px; margin-top: 9px; }
@@ -215,7 +215,7 @@ html.preloading .deck { opacity: 0; }
   flex: none;
   margin-top: 5px;
 }
-.suit-item .txt { font-size: 13px; color: var(--ink); line-height: 1.42; }
+.suit-item .txt { font-size: 14px; color: var(--ink); line-height: 1.42; }
 .cn .suit-item .txt { line-height: 1.5; }
 
 /* spec row */
@@ -225,7 +225,7 @@ html.preloading .deck { opacity: 0; }
   color: var(--gold-deep); white-space: nowrap;
 }
 .cn .spec .spec-label { letter-spacing: .14em; }
-.spec .spec-value { font-size: 13.5px; color: var(--muted-2); }
+.spec .spec-value { font-size: 14.5px; color: var(--muted-2); }
 
 /* unit-price box (product) */
 .price-box {
@@ -245,14 +245,14 @@ html.preloading .deck { opacity: 0; }
 .cn .price-box .price-label { font-size: 13px; letter-spacing: .16em; }
 .price-box .price {
   font-family: var(--num);
-  font-size: 30px;
+  font-size: 35px;
   font-weight: 800;
   color: var(--red-deep);
   letter-spacing: -.01em;
   white-space: nowrap;
 }
-.price .price-aff { font-size: 15px; font-weight: 600; }
-.price .price-unit { font-size: 14px; font-weight: 600; }
+.price .price-aff { font-size: 18px; font-weight: 800; }
+.price .price-unit { font-size: 16px; font-weight: 700; }
 
 /* ── Product page ───────────────────────────────────────────────────────── */
 .layout {
