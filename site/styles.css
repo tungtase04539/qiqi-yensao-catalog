@@ -240,9 +240,9 @@ html.preloading .deck { opacity: 0; }
 .price-box .price-tag { display: flex; align-items: center; gap: 9px; }
 .price-box .price-tag .dot { width: 7px; height: 7px; }
 .price-box .price-label {
-  font-size: 15px; letter-spacing: .22em; font-weight: 800; color: var(--gold-deep);
+  font-size: 18px; letter-spacing: .18em; font-weight: 800; color: var(--gold-deep);
 }
-.cn .price-box .price-label { font-size: 15.5px; letter-spacing: .16em; }
+.cn .price-box .price-label { font-size: 18px; letter-spacing: .14em; }
 .price-box .price {
   font-family: var(--num);
   font-size: 38px;
