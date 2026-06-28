@@ -23,19 +23,21 @@
     overflow:hidden;
   }
   header{
-    flex:none; display:flex; align-items:center; justify-content:space-between;
-    gap:12px; padding:12px 18px;
+    position:relative; flex:none;
+    display:flex; align-items:center; justify-content:space-between;
+    gap:16px; padding:10px 22px;
     border-bottom:1px solid rgba(196,154,69,.25);
   }
-  .brand{display:flex; align-items:center; gap:12px; min-width:0;}
-  .brand .mark{
-    width:38px;height:38px;border-radius:50%;flex:none;
-    background:radial-gradient(120% 120% at 50% 26%,#A8181F,#74101A);
-    border:2px solid var(--gold); display:flex;align-items:center;justify-content:center;
+  /* Brand logo — same mark as the catalog cover (logo2). */
+  .brand{display:flex; align-items:center; min-width:0;}
+  .brand img{height:50px; width:auto; display:block;}
+  /* Page counter — moved up into the header, centred. */
+  .counter{
+    position:absolute; left:50%; transform:translateX(-50%);
+    font-size:15px; letter-spacing:.06em; color:#d9c79c;
+    font-variant-numeric:tabular-nums; white-space:nowrap; pointer-events:none;
   }
-  .brand .mark img{width:26px;height:26px;object-fit:contain;}
-  .brand .t1{font-family:'Playfair Display',serif;font-weight:800;font-size:18px;color:var(--gold-l);line-height:1;}
-  .brand .t2{font-size:11px;letter-spacing:.18em;color:#caa86a;margin-top:3px;}
+  .counter b{color:var(--gold-l);font-weight:700;}
   .lang{display:flex;gap:6px;flex:none;}
   .lang button{
     font:600 13px/1 'Be Vietnam Pro',sans-serif; letter-spacing:.04em;
@@ -45,44 +47,41 @@
   .lang button.active{background:var(--gold); color:#3a2410; border-color:var(--gold);}
   .lang button:hover{border-color:var(--gold-l);}
 
-  main{flex:1; display:flex; align-items:center; justify-content:center; padding:14px; min-height:0;}
-  /* Size the book by available height so the single landscape page is as
-     large as possible with minimal empty space (width = height × 1.414). */
-  .bookwrap{ width: min(96vw, calc((100vh - 156px) * 1.414)); margin:0 auto; }
+  main{flex:1; display:flex; align-items:center; justify-content:center; padding:10px; min-height:0;}
+  /* Fill the desktop: size the single landscape page by available height
+     (width = height × 1.414) so it is as large as possible. The side nav
+     buttons float over the margins, so the page can use almost full width. */
+  .bookwrap{ width: min(94vw, calc((100vh - 92px) * 1.414)); margin:0 auto; }
   #flip{ touch-action: pan-y; min-width:0 !important; }
-  #flip .page-img{ /* StPageFlip wraps images */ }
   .stPage{ background:#F7F1E3; }
 
-  footer{
-    flex:none; display:flex; align-items:center; justify-content:center; gap:18px;
-    padding:12px 18px 18px; user-select:none;
-  }
+  /* Prev / next buttons flank the page on the left & right (saves vertical space). */
   .nav{
-    width:46px;height:46px;border-radius:50%;cursor:pointer;flex:none;
-    background:rgba(196,154,69,.12); border:1px solid rgba(196,154,69,.55); color:var(--gold-l);
-    font-size:20px; display:flex;align-items:center;justify-content:center; transition:.2s;
+    position:fixed; top:50%; transform:translateY(-50%);
+    width:56px;height:56px;border-radius:50%;cursor:pointer; z-index:30;
+    background:rgba(34,26,18,.72); border:1px solid rgba(196,154,69,.6); color:var(--gold-l);
+    font-size:24px; display:flex;align-items:center;justify-content:center;
+    transition:background .2s,color .2s,transform .08s; user-select:none;
+    box-shadow:0 6px 20px rgba(0,0,0,.35); backdrop-filter:blur(2px);
   }
+  .nav.prev{left:22px;} .nav.next{right:22px;}
   .nav:hover{background:var(--gold); color:#3a2410;}
-  .nav:active{transform:scale(.94);}
-  .counter{font-size:14px;letter-spacing:.06em;color:#d9c79c;min-width:96px;text-align:center;font-variant-numeric:tabular-nums;}
-  .counter b{color:var(--gold-l);font-weight:700;}
-  .hint{position:fixed;left:0;right:0;bottom:74px;text-align:center;font-size:12px;color:#a98f5e;pointer-events:none;opacity:.85;}
-  @media (max-width:560px){
-    .brand .t1{font-size:15px;} .brand .t2{display:none;}
-    .nav{width:42px;height:42px;}
-    header{padding:10px 12px;}
+  .nav:active{transform:translateY(-50%) scale(.93);}
+
+  @media (max-width:600px){
+    header{padding:9px 12px;}
+    .brand img{height:40px;}
+    .counter{font-size:13px;}
+    .lang button{padding:7px 11px;font-size:12px;}
+    .nav{width:44px;height:44px;font-size:20px;}
+    .nav.prev{left:8px;} .nav.next{right:8px;}
   }
 </style>
 </head>
 <body>
   <header>
-    <div class="brand">
-      <div class="mark"><img src="lib/logo-mark.webp" alt="QiQi"></div>
-      <div>
-        <div class="t1">QiQi Yến Sào</div>
-        <div class="t2" id="subtitle">CATALOG · BÁO GIÁ</div>
-      </div>
-    </div>
+    <div class="brand"><img src="lib/logo2.webp" alt="QiQi Yến"></div>
+    <div class="counter"><span id="pglabel">Trang</span> <b id="cur">1</b> / <span id="total">22</span></div>
     <div class="lang">
       <button id="btn-vi" class="active" onclick="setLang('vi')">Tiếng Việt</button>
       <button id="btn-cn" onclick="setLang('cn')">中文</button>
@@ -91,18 +90,13 @@
 
   <main><div class="bookwrap"><div id="flip"></div></div></main>
 
-  <footer>
-    <div class="nav" onclick="book && book.flipPrev()" aria-label="Trang trước">‹</div>
-    <div class="counter">Trang <b id="cur">1</b> / <span id="total">22</span></div>
-    <div class="nav" onclick="book && book.flipNext()" aria-label="Trang sau">›</div>
-  </footer>
-  <div class="hint" id="hint">Kéo mép trang hoặc bấm ‹ › để lật</div>
+  <div class="nav prev" onclick="book && book.flipPrev()" aria-label="Trang trước">‹</div>
+  <div class="nav next" onclick="book && book.flipNext()" aria-label="Trang sau">›</div>
 
   <script src="lib/page-flip.browser.js"></script>
   <script>
     var PAGES = { vi: 22, cn: 22 };
-    var SUBTITLE = { vi: 'CATALOG · BÁO GIÁ', cn: '产品目录 · 报价单' };
-    var HINT = { vi: 'Kéo mép trang hoặc bấm ‹ › để lật', cn: '拖动书页边缘或点击 ‹ › 翻页' };
+    var PGLABEL = { vi: 'Trang', cn: '页' };
     var book = null, currentLang = 'vi', booksLoaded = false;
 
     function imgs(lang){
@@ -136,8 +130,7 @@
       document.documentElement.lang = lang === 'cn' ? 'zh' : 'vi';
       document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
       document.getElementById('btn-cn').classList.toggle('active', lang === 'cn');
-      document.getElementById('subtitle').textContent = SUBTITLE[lang];
-      document.getElementById('hint').textContent = HINT[lang];
+      document.getElementById('pglabel').textContent = PGLABEL[lang];
       document.getElementById('total').textContent = PAGES[lang];
       ensureBook();
       // First load uses loadFromImages; switching languages uses updateFromImages
@@ -152,9 +145,6 @@
       else if (e.key === 'ArrowRight') book.flipNext();
     });
     window.addEventListener('load', function(){ setLang('vi'); });
-    window.addEventListener('resize', function(){
-      // StPageFlip autoSize handles width; update on orientation change just in case.
-    });
   </script>
 </body>
 </html>
