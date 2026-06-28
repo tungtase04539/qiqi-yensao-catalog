@@ -17,7 +17,7 @@ let fontsCss = readFileSync(join(here, 'fonts.css'), 'utf8');
 fontsCss = fontsCss.replace(/url\(assets\/([^)]+)\)/g, (m, file) => {
   const p = join(here, 'assets', file);
   if (!existsSync(p)) return m;
-  return `url(data:font/woff2;base64,${readFileSync(p).toString('base64')}) format('woff2')`;
+  return `url(data:font/woff2;base64,${readFileSync(p).toString('base64')})`;
 });
 html = html.replace(/<link rel="stylesheet" href="fonts\.css">/, `<style>\n${fontsCss}\n</style>`);
 
