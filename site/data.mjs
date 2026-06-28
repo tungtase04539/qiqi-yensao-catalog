@@ -143,7 +143,7 @@ export const products = [
         '馈赠亲友与合作伙伴的健康好礼',
       ],
       specLabel: '规格', spec: '100g',
-      priceLabel: '价格', price: '2.000.000 ₫',
+      priceLabel: '价格', price: '750 元',
     },
   },
   {
@@ -185,7 +185,7 @@ export const products = [
         '馈赠合作伙伴与亲友的高档健康好礼',
       ],
       specLabel: '规格', spec: '100g',
-      priceLabel: '价格', price: '3.400.000 ₫',
+      priceLabel: '价格', price: '1.100 元',
     },
   },
   {
@@ -227,7 +227,7 @@ export const products = [
         '馈赠合作伙伴与客户的高档实用健康好礼',
       ],
       specLabel: '规格', spec: '100g',
-      priceLabel: '价格', price: '3.100.000 ₫',
+      priceLabel: '价格', price: '1.000 元',
     },
   },
   {
