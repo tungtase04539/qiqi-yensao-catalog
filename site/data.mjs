@@ -366,7 +366,7 @@ export const products = [
       desc: '"Món quà vô giá từ thiên nhiên" — hòa quyện đại bổ giữa 35% tổ yến cùng đông trùng hạ thảo và hồng sâm thật. Nước yến dạng sệt, màu vàng cam, hương thảo dược đặc trưng, vị ngọt thanh từ đường phèn, hậu vị mát dịu.',
       nutriLabel: 'THÀNH PHẦN & DINH DƯỠNG',
       nutrition: [
-        { v: '35%', l: 'Hàm lượng tổ yến' }, { v: '2%', l: 'Đông trùng hạ thảo' },
+        { v: '2g', l: 'Hàm lượng tổ yến' }, { v: '2%', l: 'Đông trùng hạ thảo' },
         { v: '1%', l: 'Hồng sâm thật' }, { v: '0g', l: 'Chất béo' },
       ],
       suitableLabel: 'PHÙ HỢP VỚI',
@@ -385,7 +385,7 @@ export const products = [
       desc: '"大自然的无价之礼"——35% 燕窝与冬虫夏草、真红参的滋补融合。质地浓稠，呈金黄橙色，草本芳香浓郁，冰糖清甜、回味清润。',
       nutriLabel: '成分与营养',
       nutrition: [
-        { v: '35%', l: '燕窝含量' }, { v: '2%', l: '冬虫夏草' },
+        { v: '2g', l: '燕窝含量' }, { v: '2%', l: '冬虫夏草' },
         { v: '1%', l: '真红参' }, { v: '0g', l: '脂肪' },
       ],
       suitableLabel: '适合人群',
