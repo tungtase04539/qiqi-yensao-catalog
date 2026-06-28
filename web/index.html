@@ -53,6 +53,10 @@
      buttons float over the margins, so the page can use almost full width. */
   .bookwrap{ width: min(94vw, calc((100vh - 92px) * 1.414)); margin:0 auto; }
   #flip{ touch-action: pan-y; min-width:0 !important; }
+  /* HTML-render pages: real <img> elements stay crisp at any device-pixel-ratio
+     (the canvas renderer used by loadFromImages blurs on high-DPR phones). */
+  #flip .page{ background:#F7F1E3; overflow:hidden; }
+  #flip .page img{ width:100%; height:100%; object-fit:cover; display:block; -webkit-user-drag:none; user-select:none; }
   .stPage{ background:#F7F1E3; }
 
   /* Prev / next buttons flank the page on the left & right (saves vertical space). */
@@ -71,10 +75,17 @@
   @media (max-width:600px){
     header{padding:9px 12px;}
     .brand img{height:40px;}
-    .counter{font-size:13px;}
     .lang button{padding:7px 11px;font-size:12px;}
     .nav{width:44px;height:44px;font-size:20px;}
     .nav.prev{left:8px;} .nav.next{right:8px;}
+    /* On phones the centred counter would collide with the language buttons,
+       so move it to a pill at the bottom centre. */
+    .counter{
+      position:fixed; top:auto; bottom:16px; left:50%; transform:translateX(-50%);
+      font-size:13px; padding:7px 18px; border-radius:999px;
+      background:rgba(34,26,18,.72); border:1px solid rgba(196,154,69,.5);
+      backdrop-filter:blur(2px);
+    }
   }
 </style>
 </head>
@@ -99,9 +110,18 @@
     var PGLABEL = { vi: 'Trang', cn: '页' };
     var book = null, currentLang = 'vi', booksLoaded = false;
 
-    function imgs(lang){
+    function makePages(lang){
+      // Build real DOM page elements (HTML render → crisp on every screen).
       var arr = [];
-      for (var i = 1; i <= PAGES[lang]; i++) arr.push('pages/' + lang + '/' + String(i).padStart(2,'0') + '.jpg');
+      for (var i = 1; i <= PAGES[lang]; i++) {
+        var d = document.createElement('div');
+        d.className = 'page';
+        var img = document.createElement('img');
+        img.src = 'pages/' + lang + '/' + String(i).padStart(2,'0') + '.jpg';
+        img.alt = ''; img.draggable = false; img.decoding = 'async';
+        d.appendChild(img);
+        arr.push(d);
+      }
       return arr;
     }
     function setCounter(idx){
@@ -133,10 +153,11 @@
       document.getElementById('pglabel').textContent = PGLABEL[lang];
       document.getElementById('total').textContent = PAGES[lang];
       ensureBook();
-      // First load uses loadFromImages; switching languages uses updateFromImages
-      // on the SAME instance (destroy/recreate left it blank; reload stacked).
-      if (booksLoaded) book.updateFromImages(imgs(lang));
-      else { book.loadFromImages(imgs(lang)); booksLoaded = true; }
+      // First load uses loadFromHTML; switching languages uses updateFromHtml
+      // on the SAME instance (HTML render = crisp DOM <img>, no canvas blur).
+      var pages = makePages(lang);
+      if (booksLoaded) book.updateFromHtml(pages);
+      else { book.loadFromHTML(pages); booksLoaded = true; }
       setCounter(0);
     }
     document.addEventListener('keydown', function(e){
