@@ -601,6 +601,35 @@ export const gifts = [
     },
   },
   {
+    id: 'gift-duong-phen-70', image: 'gift-duongphen-70.jpg',
+    vi: {
+      title: 'Hộp Quà Đường Phèn 70ml', titleSize: 34, titleMaxWidth: 440,
+      subtitle: 'Hộp quà cao cấp · Lọ thủy tinh 70ml · Yến chưng sẵn',
+      nutrition: [
+        { v: '2g', l: 'Tổ yến khô / hũ' }, { v: '~29 kcal', l: 'Năng lượng / 100g' },
+        { v: '10,6%', l: 'Đường phèn' }, { v: '0g', l: 'Chất béo' },
+      ],
+      unitNote: 'Đơn giá lẻ 28.800₫/hũ',
+      sets: [
+        { name: 'Set 6', sub: '6 hũ × 70ml', price: '205.000 ₫' },
+        { name: 'Set 10', sub: '10 hũ × 70ml', price: '380.000 ₫', featured: true },
+      ],
+    },
+    cn: {
+      title: '冰糖燕窝礼盒 70ml', titleSize: 40,
+      subtitle: '高档礼盒 · 玻璃瓶 70ml · 即食燕窝',
+      nutrition: [
+        { v: '2g', l: '干燕窝 / 瓶' }, { v: '~29 kcal', l: '热量 / 100g' },
+        { v: '10.6%', l: '冰糖' }, { v: '0g', l: '脂肪' },
+      ],
+      unitNote: '零售单价 28.800₫/瓶',
+      sets: [
+        { name: '6 瓶装', sub: '6 瓶 × 70ml', price: '205.000 ₫' },
+        { name: '10 瓶装', sub: '10 瓶 × 70ml', price: '380.000 ₫', featured: true },
+      ],
+    },
+  },
+  {
     id: 'gift-duong-kieng', image: 'gift-duongkieng.jpg',
     vi: {
       title: 'Hộp Quà Đường Kiêng', titleSize: 42,
