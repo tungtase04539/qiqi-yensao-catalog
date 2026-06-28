@@ -1,0 +1,31 @@
+/* Self-hosted, subset web fonts (no network needed) so the catalog renders
+   identically whether opened online, offline, exported to PDF, or screenshotted
+   for the flipbook. Subset to the exact characters used in this catalog. */
+
+/* Playfair Display (serif — VI headings) */
+@font-face{font-family:'Playfair Display';font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/playfair-500.woff2) format('woff2');}
+@font-face{font-family:'Playfair Display';font-style:normal;font-weight:600;font-display:swap;src:url(assets/fonts/playfair-600.woff2) format('woff2');}
+@font-face{font-family:'Playfair Display';font-style:normal;font-weight:700;font-display:swap;src:url(assets/fonts/playfair-700.woff2) format('woff2');}
+@font-face{font-family:'Playfair Display';font-style:normal;font-weight:800;font-display:swap;src:url(assets/fonts/playfair-800.woff2) format('woff2');}
+@font-face{font-family:'Playfair Display';font-style:normal;font-weight:900;font-display:swap;src:url(assets/fonts/playfair-900.woff2) format('woff2');}
+@font-face{font-family:'Playfair Display';font-style:italic;font-weight:500;font-display:swap;src:url(assets/fonts/playfair-500i.woff2) format('woff2');}
+@font-face{font-family:'Playfair Display';font-style:italic;font-weight:600;font-display:swap;src:url(assets/fonts/playfair-600i.woff2) format('woff2');}
+@font-face{font-family:'Playfair Display';font-style:italic;font-weight:700;font-display:swap;src:url(assets/fonts/playfair-700i.woff2) format('woff2');}
+
+/* Be Vietnam Pro (sans — VI body & numbers) */
+@font-face{font-family:'Be Vietnam Pro';font-style:normal;font-weight:300;font-display:swap;src:url(assets/fonts/bevietnam-300.woff2) format('woff2');}
+@font-face{font-family:'Be Vietnam Pro';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/bevietnam-400.woff2) format('woff2');}
+@font-face{font-family:'Be Vietnam Pro';font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/bevietnam-500.woff2) format('woff2');}
+@font-face{font-family:'Be Vietnam Pro';font-style:normal;font-weight:600;font-display:swap;src:url(assets/fonts/bevietnam-600.woff2) format('woff2');}
+@font-face{font-family:'Be Vietnam Pro';font-style:normal;font-weight:700;font-display:swap;src:url(assets/fonts/bevietnam-700.woff2) format('woff2');}
+@font-face{font-family:'Be Vietnam Pro';font-style:normal;font-weight:800;font-display:swap;src:url(assets/fonts/bevietnam-800.woff2) format('woff2');}
+
+/* Noto Sans SC (sans — CN body) */
+@font-face{font-family:'Noto Sans SC';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/notosanssc-400.woff2) format('woff2');}
+@font-face{font-family:'Noto Sans SC';font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/notosanssc-500.woff2) format('woff2');}
+@font-face{font-family:'Noto Sans SC';font-style:normal;font-weight:700;font-display:swap;src:url(assets/fonts/notosanssc-700.woff2) format('woff2');}
+
+/* Noto Serif SC (serif — CN headings) */
+@font-face{font-family:'Noto Serif SC';font-style:normal;font-weight:600;font-display:swap;src:url(assets/fonts/notoserifsc-600.woff2) format('woff2');}
+@font-face{font-family:'Noto Serif SC';font-style:normal;font-weight:700;font-display:swap;src:url(assets/fonts/notoserifsc-700.woff2) format('woff2');}
+@font-face{font-family:'Noto Serif SC';font-style:normal;font-weight:900;font-display:swap;src:url(assets/fonts/notoserifsc-900.woff2) format('woff2');}

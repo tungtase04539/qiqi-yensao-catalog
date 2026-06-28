@@ -11,7 +11,17 @@ execSync('node build.mjs', { cwd: here, stdio: 'inherit' });
 
 let html = readFileSync(join(here, 'index.html'), 'utf8');
 
-// Inline the stylesheet so the file is truly self-contained.
+// Inline the font stylesheet, embedding each subset woff2 as a data URI so the
+// file carries its own fonts (renders identically offline / in Zalo).
+let fontsCss = readFileSync(join(here, 'fonts.css'), 'utf8');
+fontsCss = fontsCss.replace(/url\(assets\/([^)]+)\)/g, (m, file) => {
+  const p = join(here, 'assets', file);
+  if (!existsSync(p)) return m;
+  return `url(data:font/woff2;base64,${readFileSync(p).toString('base64')}) format('woff2')`;
+});
+html = html.replace(/<link rel="stylesheet" href="fonts\.css">/, `<style>\n${fontsCss}\n</style>`);
+
+// Inline the main stylesheet so the file is truly self-contained.
 const css = readFileSync(join(here, 'styles.css'), 'utf8');
 html = html.replace(/<link rel="stylesheet" href="styles\.css">/, `<style>\n${css}\n</style>`);
 
