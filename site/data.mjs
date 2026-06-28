@@ -572,35 +572,6 @@ export const products = [
 // image reuses the matching product's photo (no box photos were provided).
 export const gifts = [
   {
-    id: 'gift-duong-phen', image: 'gift-duongphen.jpg',
-    vi: {
-      title: 'Hộp Quà Đường Phèn', titleSize: 42,
-      subtitle: 'Hộp quà cao cấp · Lọ thủy tinh 150ml · Yến chưng sẵn',
-      nutrition: [
-        { v: '2g', l: 'Tổ yến khô / hũ' }, { v: '~29 kcal', l: 'Năng lượng / 100g' },
-        { v: '10,6%', l: 'Đường phèn' }, { v: '0g', l: 'Chất béo' },
-      ],
-      unitNote: 'Đơn giá lẻ 45.000₫/hũ',
-      sets: [
-        { name: 'Set 6', sub: '6 hũ × 150ml', price: '330.000 ₫' },
-        { name: 'Set 8', sub: '8 hũ × 150ml', price: '416.000 ₫', featured: true },
-      ],
-    },
-    cn: {
-      title: '冰糖燕窝礼盒', titleSize: 42,
-      subtitle: '高档礼盒 · 玻璃瓶 150ml · 即食燕窝',
-      nutrition: [
-        { v: '2g', l: '干燕窝 / 瓶' }, { v: '~29 kcal', l: '热量 / 100g' },
-        { v: '10.6%', l: '冰糖' }, { v: '0g', l: '脂肪' },
-      ],
-      unitNote: '零售单价 45.000₫/瓶',
-      sets: [
-        { name: '6 瓶装', sub: '6 瓶 × 150ml', price: '330.000 ₫' },
-        { name: '8 瓶装', sub: '8 瓶 × 150ml', price: '416.000 ₫', featured: true },
-      ],
-    },
-  },
-  {
     id: 'gift-duong-phen-70', image: 'gift-duongphen-70.jpg',
     vi: {
       title: 'Hộp Quà Đường Phèn 70ml', titleSize: 34, titleMaxWidth: 440,
@@ -742,6 +713,35 @@ export const gifts = [
       sets: [
         { name: '6 瓶装', sub: '6 瓶 × 70ml', price: '205.000 ₫' },
         { name: '10 瓶装', sub: '10 瓶 × 70ml', price: '380.000 ₫', featured: true },
+      ],
+    },
+  },
+  {
+    id: 'gift-duong-phen', image: 'gift-duongphen.jpg',
+    vi: {
+      title: 'Hộp Quà Đường Phèn', titleSize: 42,
+      subtitle: 'Hộp quà cao cấp · Lọ thủy tinh 150ml · Yến chưng sẵn',
+      nutrition: [
+        { v: '2g', l: 'Tổ yến khô / hũ' }, { v: '~29 kcal', l: 'Năng lượng / 100g' },
+        { v: '10,6%', l: 'Đường phèn' }, { v: '0g', l: 'Chất béo' },
+      ],
+      unitNote: 'Đơn giá lẻ 45.000₫/hũ',
+      sets: [
+        { name: 'Set 6', sub: '6 hũ × 150ml', price: '330.000 ₫' },
+        { name: 'Set 8', sub: '8 hũ × 150ml', price: '416.000 ₫', featured: true },
+      ],
+    },
+    cn: {
+      title: '冰糖燕窝礼盒', titleSize: 42,
+      subtitle: '高档礼盒 · 玻璃瓶 150ml · 即食燕窝',
+      nutrition: [
+        { v: '2g', l: '干燕窝 / 瓶' }, { v: '~29 kcal', l: '热量 / 100g' },
+        { v: '10.6%', l: '冰糖' }, { v: '0g', l: '脂肪' },
+      ],
+      unitNote: '零售单价 45.000₫/瓶',
+      sets: [
+        { name: '6 瓶装', sub: '6 瓶 × 150ml', price: '330.000 ₫' },
+        { name: '8 瓶装', sub: '8 瓶 × 150ml', price: '416.000 ₫', featured: true },
       ],
     },
   },
