@@ -80,54 +80,55 @@
 .portrait .cover-layout {
   flex-direction: column;
   align-items: center;
-  justify-content: center;       /* centre seal + text block; footer sits below */
+  justify-content: space-evenly;  /* spread seal + text to fill the page */
   text-align: center;
-  padding: 70px 90px 210px;       /* reserve the lower zone for the fixed footer */
-  gap: 40px;
+  padding: 60px 80px 196px;        /* reserve the lower zone for the fixed footer */
+  gap: 0;
 }
 .portrait .cover-divider { display: none; }
 .portrait .seal-wrap { width: auto; }
-.portrait .seal { width: 520px; height: 520px; }
-.portrait .seal img { width: 340px; height: 340px; }
+.portrait .seal { width: 580px; height: 580px; }
+.portrait .seal img { width: 384px; height: 384px; }
 .portrait .cover-main { flex: none; align-items: center; text-align: center; }
-.portrait .cover-kicker { font-size: 21px; letter-spacing: .32em; }
-.portrait .cover-title { font-size: 120px; margin-top: 26px; }
-.portrait.cn .cover-title, .portrait .cn .cover-title { font-size: 130px; }
-.portrait .cover-rule { margin: 30px auto 0; width: 96px; }
-.portrait .cover-bullets { align-items: center; gap: 18px; margin-top: 34px; }
-.portrait .cover-bullet .txt { font-size: 23px; }
-.portrait .cover-tagline { font-size: 30px; margin-top: 34px; }
-.portrait .cover-footer { left: 110px; right: 110px; bottom: 70px; }
-.portrait .cover-ribbon { font-size: 17px; }
-.portrait .cover-contact { font-size: 25px; gap: 26px; margin-top: 16px; }
-.portrait .cover-contact .num img { width: 36px; height: 24px; }
-.portrait .cover-org { font-size: 17px; margin-top: 14px; }
+.portrait .cover-kicker { font-size: 30px; letter-spacing: .3em; }
+.portrait .cover-title { font-size: 138px; margin-top: 30px; }
+.portrait.cn .cover-title, .portrait .cn .cover-title { font-size: 148px; }
+.portrait .cover-rule { margin: 38px auto 0; width: 124px; }
+.portrait .cover-bullets { align-items: center; gap: 26px; margin-top: 42px; }
+.portrait .cover-bullet .txt { font-size: 36px; }
+.portrait .cover-bullet .gem { width: 12px; height: 12px; }
+.portrait .cover-tagline { font-size: 46px; margin-top: 44px; }
+.portrait .cover-footer { left: 90px; right: 90px; bottom: 64px; }
+.portrait .cover-ribbon { font-size: 24px; }
+.portrait .cover-contact { font-size: 36px; gap: 30px; margin-top: 20px; }
+.portrait .cover-contact .num img { width: 50px; height: 33px; }
+.portrait .cover-org { font-size: 24px; margin-top: 18px; }
 
 /* ── Intro / TOC / Thanks: same vertical layout, scaled up & centred ─────── */
-.portrait .intro-layout { padding: 120px 110px; justify-content: center; }
-.portrait .intro-kicker { font-size: 28px; }
-.portrait .intro-heading { font-size: 66px; }
-.portrait .intro-salutation { font-size: 36px; margin-top: 16px; }
-.portrait .intro-body { font-size: 33px; line-height: 1.66; max-width: 900px; margin-top: 18px; }
-.portrait .cn .intro-body, .portrait.cn .intro-body { line-height: 1.78; }
-.portrait .intro-rule { margin-top: 28px; } .portrait .intro-rule .seg { width: 90px; }
-.portrait .intro-cert-label { font-size: 26px; margin-top: 34px; }
+.portrait .intro-layout { padding: 80px 92px; justify-content: space-evenly; }
+.portrait .intro-kicker { font-size: 30px; }
+.portrait .intro-heading { font-size: 70px; }
+.portrait .intro-salutation { font-size: 38px; margin-top: 16px; }
+.portrait .intro-body { font-size: 34px; line-height: 1.58; max-width: 920px; margin-top: 18px; }
+.portrait .cn .intro-body, .portrait.cn .intro-body { line-height: 1.7; }
+.portrait .intro-rule { margin-top: 28px; } .portrait .intro-rule .seg { width: 96px; }
+.portrait .intro-cert-label { font-size: 28px; margin-top: 32px; }
 .portrait .certs { gap: 48px; margin-top: 30px; }
-.portrait .cert .frame img { height: 380px; }
-.portrait .cert .cap { font-size: 24px; }
+.portrait .cert .frame img { height: 360px; }
+.portrait .cert .cap { font-size: 26px; }
 
-.portrait .toc-layout { padding: 110px 100px; }
-.portrait .toc-kicker { font-size: 28px; }
-.portrait .toc-title { font-size: 92px; }
-.portrait .toc-subtitle { font-size: 31px; margin-top: 14px; }
-.portrait .toc-rule { margin-top: 26px; } .portrait .toc-rule .seg { width: 90px; }
-.portrait .toc-list { width: 920px; margin-top: 50px; }
-.portrait .toc-row { padding: 52px 8px; gap: 40px; }
-.portrait .toc-no { font-size: 76px; width: 108px; }
-.portrait .toc-name { font-size: 52px; }
-.portrait .cn .toc-name, .portrait.cn .toc-name { font-size: 50px; }
-.portrait .toc-desc { font-size: 28px; margin-top: 10px; }
-.portrait .toc-row .gem { width: 14px; height: 14px; }
+.portrait .toc-layout { padding: 96px 96px; justify-content: center; }
+.portrait .toc-kicker { font-size: 30px; }
+.portrait .toc-title { font-size: 104px; }
+.portrait .toc-subtitle { font-size: 34px; margin-top: 16px; }
+.portrait .toc-rule { margin-top: 30px; } .portrait .toc-rule .seg { width: 100px; }
+.portrait .toc-list { width: 940px; margin-top: 56px; }
+.portrait .toc-row { padding: 60px 10px; gap: 44px; }
+.portrait .toc-no { font-size: 88px; width: 120px; }
+.portrait .toc-name { font-size: 60px; }
+.portrait .cn .toc-name, .portrait.cn .toc-name { font-size: 58px; }
+.portrait .toc-desc { font-size: 32px; margin-top: 12px; }
+.portrait .toc-row .gem { width: 15px; height: 15px; }
 
 .portrait .thanks-layout { padding: 120px 110px; }
 .portrait .thanks-seal { width: 270px; height: 270px; margin-bottom: 34px; }
