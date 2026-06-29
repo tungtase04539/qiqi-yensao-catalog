@@ -111,7 +111,7 @@ export const products = [
       kicker: 'SẢN PHẨM 01 · YẾN SÀO NGUYÊN BẢN',
       title: 'Yến Thô', titleSize: 46,
       subtitle: '100% thiên nhiên nguyên chất',
-      desc: 'Dòng sản phẩm nguyên bản nhất từ thiên nhiên, giữ trọn trạng thái tổ chim nguyên thủy, chưa qua sơ chế nhặt lông. Bề mặt trắng tự nhiên xen lẫn lông yến, mang mùi thơm đặc trưng — lý tưởng cho khách hàng muốn tự tay làm sạch và chế biến yến nguyên chất.',
+      desc: 'Tổ yến nguyên bản, chưa nhặt lông — giữ trọn dưỡng chất tự nhiên. Lý tưởng cho người muốn tự tay làm sạch và chế biến.',
       nutriLabel: 'GIÁ TRỊ DINH DƯỠNG',
       nutrition: [
         { v: '≥ 48%', l: 'Hàm lượng Protein' }, { v: '44–52 g', l: 'Acid Amin / 100g' },
@@ -130,7 +130,7 @@ export const products = [
       kicker: '产品 01 · 天然原盏燕窝',
       title: '原盏燕窝', titleSize: 44,
       subtitle: '100% 纯天然原盏',
-      desc: '最天然、最原始的产品，完整保留鸟巢原始形态，未经挑毛加工。表面呈天然白色、间杂燕毛黑色，带有浓郁的天然燕窝香味——非常适合愿意亲手清洗、烹制纯正燕窝的懂行顾客。',
+      desc: '最原始的未挑毛燕窝，完整保留天然营养与香气。适合喜欢亲手清洗、烹制的顾客。',
       nutriLabel: '营养价值',
       nutrition: [
         { v: '≥ 48%', l: '蛋白质含量' }, { v: '44–52 g', l: '氨基酸 / 100g' },
@@ -153,7 +153,7 @@ export const products = [
       kicker: 'SẢN PHẨM 02 · YẾN TINH CHẾ',
       title: 'Yến Rút Lông Nước', titleSize: 43,
       subtitle: 'Làm sạch lông bằng nước',
-      desc: 'Dòng sản phẩm tiện lợi nhất cho người bận rộn. Tổ yến đã được nhặt sạch lông và tạp chất tỉ mỉ, giữ nguyên hình tổ chim đan kết đẹp mắt, màu trắng tự nhiên — chỉ cần ngâm nở và chưng ngay, không mất công làm sạch.',
+      desc: 'Đã nhặt sạch lông, giữ nguyên hình tổ đẹp mắt. Chỉ cần ngâm nở rồi chưng ngay — tiện cho người bận rộn.',
       nutriLabel: 'GIÁ TRỊ DINH DƯỠNG',
       nutrition: [
         { v: '≥ 40%', l: 'Hàm lượng Protein' }, { v: '46–50 g', l: 'Acid Amin / 100g' },
@@ -172,7 +172,7 @@ export const products = [
       kicker: '产品 02 · 精制燕窝',
       title: '水拔毛燕窝', titleSize: 42,
       subtitle: '水中挑毛清洗',
-      desc: '最便捷的产品，专为忙碌人群设计。天然燕窝经精细挑毛、去除杂质，完整保留鸟巢交织的优美形态与天然白色——无需清洗，泡发后即可炖煮。',
+      desc: '已挑净燕毛、完整保形。泡发后即可炖煮，方便忙碌人群。',
       nutriLabel: '营养价值',
       nutrition: [
         { v: '≥ 40%', l: '蛋白质含量' }, { v: '46–50 g', l: '氨基酸 / 100g' },
@@ -195,7 +195,7 @@ export const products = [
       kicker: 'SẢN PHẨM 02 · YẾN TINH CHẾ',
       title: 'Yến Tinh Chế', titleSize: 46,
       subtitle: 'Sấy lạnh, sạch tinh khiết',
-      desc: 'Tổ yến thiên nhiên làm sạch hoàn toàn, cam kết không tạp chất khi soi kính hiển vi. Giữ trọn hình tổ chim đan kết, màu trắng tự nhiên, sấy lạnh giữ dưỡng chất — ngâm nở và chưng ngay, tiện lợi cho người bận rộn.',
+      desc: 'Làm sạch hoàn toàn, không tạp chất. Sấy lạnh giữ trọn dưỡng chất — ngâm nở rồi chưng ngay, tiện lợi.',
       nutriLabel: 'GIÁ TRỊ DINH DƯỠNG',
       nutrition: [
         { v: '≥ 40%', l: 'Protein (tới 54,8%)' }, { v: '46–50 g', l: 'Acid Amin / 100g' },
@@ -214,7 +214,7 @@ export const products = [
       kicker: '产品 02 · 精制燕窝',
       title: '精制燕窝', titleSize: 44,
       subtitle: '低温冷干，纯净无杂质',
-      desc: '天然燕窝彻底清洗，显微镜下检测不出杂质。完整保留鸟巢交织形态、天然白色，低温冷干锁住营养——泡发后即可炖煮，方便忙碌人群。',
+      desc: '彻底清洗、无杂质，低温冷干锁住营养。泡发后即可炖煮，方便快捷。',
       nutriLabel: '营养价值',
       nutrition: [
         { v: '≥ 40%', l: '蛋白质（高达54.8%）' }, { v: '46–50 g', l: '氨基酸 / 100g' },
@@ -237,7 +237,7 @@ export const products = [
       kicker: 'SẢN PHẨM 03 · YẾN CHƯNG SẴN',
       title: 'Yến Sâm Đông Trùng Đường Kiêng', titleSize: 35,
       subtitle: 'Đường ăn kiêng Isomalt · an toàn đường huyết',
-      desc: 'Giải pháp bồi bổ thượng hạng cho người cần kiểm soát đường huyết. Thay đường phèn bằng đường ăn kiêng Isomalt, tăng cường 7% đông trùng hạ thảo và 2% hồng sâm thật. Nước yến nâu vàng, đượm hương thảo dược — chỉ 9 kcal/100g, không chất béo, an toàn cho người tiểu đường.',
+      desc: 'Yến chưng đường ăn kiêng Isomalt, thêm đông trùng hạ thảo và hồng sâm. Chỉ 9 kcal/100g, không chất béo — an toàn cho người tiểu đường.',
       nutriLabel: 'THÀNH PHẦN & DINH DƯỠNG',
       nutrition: [
         { v: '2g', l: 'Tổ yến' }, { v: '7%', l: 'Đông trùng hạ thảo' },
@@ -256,7 +256,7 @@ export const products = [
       kicker: '产品 03 · 即食燕窝',
       title: '无糖燕窝参虫草', titleSize: 42,
       subtitle: '无糖代糖配方（Isomalt）',
-      desc: '为需要严格控糖人群研制的高端滋补饮品。以 Isomalt 代糖取代冰糖，强化添加 7% 冬虫夏草与 2% 真红参。燕窝呈天然棕黄色、草本香浓——每 100g 仅 9 千卡、零脂肪，糖尿病人也安心。',
+      desc: 'Isomalt 代糖燕窝，添加冬虫夏草与真红参。每 100g 仅 9 千卡、零脂肪，糖尿病人安心。',
       nutriLabel: '成分与营养',
       nutrition: [
         { v: '2g', l: '燕窝含量' }, { v: '7%', l: '冬虫夏草' },
@@ -279,7 +279,7 @@ export const products = [
       kicker: 'SẢN PHẨM 03 · YẾN CHƯNG SẴN',
       title: 'Yến Chưng Đường Kiêng', titleSize: 42,
       subtitle: 'Công thức 3 KHÔNG: không đường · không béo · ít calo',
-      desc: 'Giữ trọn vị thanh mát của yến sào truyền thống với công thức đường ăn kiêng chuyên biệt — calo siêu thấp (1 kcal/100g), hoàn toàn không đường. "Món quà vô giá từ thiên nhiên" cho người tiểu đường, giảm cân và kiểm soát đường huyết khắt khe.',
+      desc: 'Yến chưng hoàn toàn không đường, calo siêu thấp (1 kcal/100g). Dành cho người tiểu đường, giảm cân và kiểm soát đường huyết.',
       nutriLabel: 'THÀNH PHẦN & DINH DƯỠNG',
       nutrition: [
         { v: '2g', l: 'Tổ yến khô / hũ' }, { v: '1 kcal', l: 'Năng lượng / 100g' },
@@ -298,7 +298,7 @@ export const products = [
       kicker: '产品 03 · 即食燕窝',
       title: '无糖燕窝', titleSize: 44,
       subtitle: '三无配方：无糖 · 无脂 · 超低热量',
-      desc: '保留传统燕窝的清润口感，采用专用代糖配方——每 100g 仅 1 千卡、完全无糖。"大自然的无价之礼"，专为糖尿病、减重及需严格控糖人群打造。',
+      desc: '完全无糖、超低热量（每 100g 仅 1 千卡）的即食燕窝。专为糖尿病、减重与控糖人群打造。',
       nutriLabel: '成分与营养',
       nutrition: [
         { v: '2g', l: '干燕窝 / 瓶' }, { v: '1 kcal', l: '热量 / 100g' },
@@ -321,7 +321,7 @@ export const products = [
       kicker: 'SẢN PHẨM 03 · YẾN CHƯNG SẴN',
       title: 'Yến Chưng Đường Phèn', titleSize: 42,
       subtitle: 'Hương vị truyền thống · dễ dùng mọi lứa tuổi',
-      desc: 'Dòng yến chưng truyền thống, nguyên bản nhất — 2g tổ yến khô kết hợp 10,6% đường phèn thanh mát. Dạng sệt, màu trắng đục đặc trưng, vị ngọt dịu thanh, giúp giải nhiệt, bồi bổ và phục hồi sinh lực cho cả gia đình.',
+      desc: 'Yến chưng đường phèn truyền thống, vị ngọt thanh dịu. Giải nhiệt, bồi bổ và phục hồi sinh lực cho cả gia đình.',
       nutriLabel: 'THÀNH PHẦN & DINH DƯỠNG',
       nutrition: [
         { v: '2g', l: 'Tổ yến khô / hũ' }, { v: '~29 kcal', l: 'Năng lượng / 100g' },
@@ -340,7 +340,7 @@ export const products = [
       kicker: '产品 03 · 即食燕窝',
       title: '冰糖燕窝', titleSize: 44,
       subtitle: '传统口味 · 老少皆宜',
-      desc: '最传统、最原味的即食燕窝——2g 干燕窝搭配 10.6% 清润冰糖。质地浓稠、燕丝饱满，呈天然乳白色，甜而不腻、回味清甜，清热润燥、滋补养生，适合全家日常享用。',
+      desc: '最传统的冰糖即食燕窝，清甜不腻。清热润燥、滋补养生，全家日常适用。',
       nutriLabel: '成分与营养',
       nutrition: [
         { v: '2g', l: '干燕窝 / 瓶' }, { v: '~29 kcal', l: '热量 / 100g' },
@@ -363,7 +363,7 @@ export const products = [
       kicker: 'SẢN PHẨM 03 · YẾN CHƯNG SẴN',
       title: 'Yến Sâm Đông Trùng', titleSize: 42,
       subtitle: 'Bộ ba Yến · Sâm · Đông trùng',
-      desc: '"Món quà vô giá từ thiên nhiên" — hòa quyện đại bổ giữa 35% tổ yến cùng đông trùng hạ thảo và hồng sâm thật. Nước yến dạng sệt, màu vàng cam, hương thảo dược đặc trưng, vị ngọt thanh từ đường phèn, hậu vị mát dịu.',
+      desc: 'Yến hòa quyện đông trùng hạ thảo và hồng sâm — đại bổ. Vị ngọt thanh từ đường phèn, hậu vị mát dịu.',
       nutriLabel: 'THÀNH PHẦN & DINH DƯỠNG',
       nutrition: [
         { v: '2g', l: 'Hàm lượng tổ yến' }, { v: '2%', l: 'Đông trùng hạ thảo' },
@@ -382,7 +382,7 @@ export const products = [
       kicker: '产品 03 · 即食燕窝',
       title: '燕窝参虫草', titleSize: 44,
       subtitle: '燕窝 · 人参 · 冬虫夏草',
-      desc: '"大自然的无价之礼"——35% 燕窝与冬虫夏草、真红参的滋补融合。质地浓稠，呈金黄橙色，草本芳香浓郁，冰糖清甜、回味清润。',
+      desc: '燕窝融合冬虫夏草与真红参，滋补佳品。冰糖清甜、回味清润。',
       nutriLabel: '成分与营养',
       nutrition: [
         { v: '2g', l: '燕窝含量' }, { v: '2%', l: '冬虫夏草' },
@@ -405,7 +405,7 @@ export const products = [
       kicker: 'SẢN PHẨM 03 · YẾN CHƯNG SẴN',
       title: 'Yến Chưng Đông Trùng Hạ Thảo', titleSize: 33,
       subtitle: 'Hàm lượng tổ yến 2g · Đông trùng hạ thảo · Lọ 70ml',
-      desc: 'Yến chưng với hàm lượng tổ yến 2g, kết hợp đông trùng hạ thảo và đường phèn thanh mát. Bồi bổ cơ thể, tăng cường sinh lực và nâng cao sức đề kháng — dùng trực tiếp tiện lợi, ngon hơn khi ướp lạnh.',
+      desc: 'Yến chưng đông trùng hạ thảo và đường phèn. Bồi bổ, tăng sức đề kháng — dùng ngay, ngon hơn khi ướp lạnh.',
       nutriLabel: 'THÀNH PHẦN & DINH DƯỠNG',
       nutrition: [
         { v: '2g', l: 'Hàm lượng tổ yến' }, { v: '~34 kcal', l: 'Năng lượng / 100g' },
@@ -424,7 +424,7 @@ export const products = [
       kicker: '产品 03 · 即食燕窝',
       title: '燕窝冬虫夏草', titleSize: 42,
       subtitle: '燕窝含量 2g · 冬虫夏草 · 70ml',
-      desc: '燕窝含量 2g，搭配冬虫夏草与清润冰糖。滋补身体、增强体力与免疫力，开瓶即食，冷藏后风味更佳。',
+      desc: '燕窝搭配冬虫夏草与冰糖。滋补强身、增强免疫，开瓶即食，冷藏更佳。',
       nutriLabel: '成分与营养',
       nutrition: [
         { v: '2g', l: '燕窝含量' }, { v: '~34 kcal', l: '热量 / 100g' },
@@ -446,8 +446,8 @@ export const products = [
     vi: {
       kicker: 'SẢN PHẨM 03 · YẾN CHƯNG SẴN',
       title: 'Hoàng Yến Đông Trùng', titleSize: 41,
-      subtitle: 'Hàm lượng tổ yến đến 50% · Sâm · Đông trùng',
-      desc: 'Phiên bản hoàng kim với hàm lượng tổ yến lên đến 50%, kết hợp đông trùng hạ thảo và hồng sâm. Bồi bổ cơ thể toàn diện, tăng cường thể lực và nâng cao sức đề kháng. Dùng trực tiếp, ngon hơn khi ướp lạnh.',
+      subtitle: 'Hàm lượng tổ yến 4g · Sâm · Đông trùng',
+      desc: 'Phiên bản hoàng kim — tổ yến 4g, thêm đông trùng hạ thảo và hồng sâm. Bồi bổ toàn diện, tăng cường thể lực và sức đề kháng.',
       nutriLabel: 'THÀNH PHẦN & QUY CÁCH',
       nutrition: [
         { v: '4g', l: 'Hàm lượng tổ yến' }, { v: '1%', l: 'Hồng sâm thật' },
@@ -465,8 +465,8 @@ export const products = [
     cn: {
       kicker: '产品 03 · 即食燕窝',
       title: '皇燕参虫草', titleSize: 42,
-      subtitle: '燕窝含量高达 50% · 人参 · 冬虫夏草',
-      desc: '皇金版本，燕窝含量高达 50%，搭配冬虫夏草与红参。全面滋补身体、增强体力、提升免疫力。可直接饮用，冷藏后风味更佳。',
+      subtitle: '燕窝含量 4g · 人参 · 冬虫夏草',
+      desc: '皇金版本——燕窝含量 4g，搭配冬虫夏草与红参。全面滋补、增强体力与免疫力。',
       nutriLabel: '成分与规格',
       nutrition: [
         { v: '4g', l: '燕窝含量' }, { v: '1%', l: '真红参' },
@@ -489,7 +489,7 @@ export const products = [
       kicker: 'SẢN PHẨM 03 · YẾN CHƯNG SẴN',
       title: 'Yến Chưng Đường Phèn 150ml', titleSize: 33,
       subtitle: 'Lọ lớn 150ml · hương vị truyền thống · tiện dùng cả nhà',
-      desc: 'Phiên bản lọ lớn 150ml của dòng yến chưng truyền thống — tổ yến tươi kết hợp đường phèn thanh mát. Dạng sệt, màu trắng đục đặc trưng, vị ngọt dịu thanh, giúp giải nhiệt, bồi bổ và phục hồi sinh lực, lý tưởng dùng chung cho cả gia đình.',
+      desc: 'Lọ lớn 150ml — yến chưng đường phèn truyền thống, ngọt thanh dịu. Giải nhiệt, bồi bổ, lý tưởng cho cả gia đình.',
       nutriLabel: 'THÀNH PHẦN & DINH DƯỠNG',
       nutrition: [
         { v: '2g', l: 'Yến tươi / lọ' }, { v: '~29 kcal', l: 'Năng lượng / 100g' },
@@ -508,7 +508,7 @@ export const products = [
       kicker: '产品 03 · 即食燕窝',
       title: '冰糖燕窝 150ml', titleSize: 40,
       subtitle: '大瓶 150ml · 传统口味 · 全家共享',
-      desc: '传统冰糖燕窝的大瓶 150ml 版本——鲜炖燕窝搭配清润冰糖，质地浓稠、呈天然乳白色，甜而不腻、回味清甜，清热润燥、滋补养生，适合全家日常享用。',
+      desc: '传统冰糖燕窝大瓶 150ml 版本，清甜不腻。清热润燥、滋补养生，全家日常适用。',
       nutriLabel: '成分与营养',
       nutrition: [
         { v: '2g', l: '鲜燕窝 / 瓶' }, { v: '~29 kcal', l: '热量 / 100g' },
@@ -531,7 +531,7 @@ export const products = [
       kicker: 'SẢN PHẨM 03 · YẾN CHƯNG SẴN',
       title: 'Yến Sâm Đông Trùng Đường Kiêng 150ml', titleSize: 28,
       subtitle: 'Lọ lớn 150ml · đường ăn kiêng Isomalt · an toàn đường huyết',
-      desc: 'Phiên bản lọ lớn 150ml cho người cần kiểm soát đường huyết. Dùng đường ăn kiêng Isomalt thay đường phèn, bổ sung đông trùng hạ thảo và đẳng sâm. Nước yến thơm hương thảo dược, chỉ 9 kcal/100g, không chất béo — an toàn cho người tiểu đường và đang ăn kiêng.',
+      desc: 'Lọ lớn 150ml, đường ăn kiêng Isomalt, thêm đông trùng hạ thảo và đẳng sâm. Chỉ 9 kcal/100g — an toàn cho người tiểu đường.',
       nutriLabel: 'THÀNH PHẦN & DINH DƯỠNG',
       nutrition: [
         { v: '9 kcal', l: 'Năng lượng / 100g' }, { v: '2g', l: 'Đông trùng hạ thảo' },
@@ -550,7 +550,7 @@ export const products = [
       kicker: '产品 03 · 即食燕窝',
       title: '无糖燕窝参虫草 150ml', titleSize: 35,
       subtitle: '大瓶 150ml · Isomalt 代糖 · 控糖安心',
-      desc: '为控糖人群打造的大瓶 150ml 版本。以 Isomalt 代糖取代冰糖，强化添加冬虫夏草与党参，草本香浓——每 100g 仅 9 千卡、零脂肪，糖尿病人与节食人群皆可安心享用。',
+      desc: '控糖大瓶 150ml 版本，Isomalt 代糖，添加冬虫夏草与党参。每 100g 仅 9 千卡，糖尿病人安心。',
       nutriLabel: '成分与营养',
       nutrition: [
         { v: '9 kcal', l: '热量 / 100g' }, { v: '2g', l: '冬虫夏草' },
