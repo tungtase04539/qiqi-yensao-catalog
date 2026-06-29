@@ -274,6 +274,9 @@ html.preloading .deck { opacity: 0; }
 
 .media-gallery { flex: none; width: 442px; display: flex; flex-direction: column; gap: 14px; }
 .media-single  { flex: none; width: 430px; display: flex; flex-direction: column; }
+/* landscape (3:2) photo → a matching frame, centred in the column (no crop) */
+.media-single.wide { justify-content: center; }
+.media-single.wide .hero { flex: none; aspect-ratio: 3 / 2; }
 
 .hero {
   flex: 1; min-height: 0;

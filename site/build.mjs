@@ -117,7 +117,7 @@ function tocPage(lang) {
 function media(p, alt) {
   const m = p.media;
   if (m.type === 'single') {
-    return `<div class="media-single"><div class="hero"><img src="assets/${m.img}" alt="${attr(alt)}"></div></div>`;
+    return `<div class="media-single${m.wide ? ' wide' : ''}"><div class="hero"><img src="assets/${m.img}" alt="${attr(alt)}"></div></div>`;
   }
   const heroStyle = m.heroPos ? ` style="object-position:${m.heroPos}"` : '';
   const thumbs = m.thumbs

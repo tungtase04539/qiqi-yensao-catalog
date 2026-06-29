@@ -54,6 +54,9 @@
 /* single product image is a portrait poster → centred portrait frame (no crop) */
 .portrait .media-single { width: auto; flex: none; align-self: center; }
 .portrait .media-single .hero { flex: none; width: 430px; height: 540px; }
+/* landscape (3:2) photo → full-width 3:2 frame (no crop) */
+.portrait .media-single.wide { width: 100%; }
+.portrait .media-single.wide .hero { width: 100%; height: auto; aspect-ratio: 3 / 2; }
 /* natural-height info with a consistent rhythm (no space-between drift) */
 .portrait .info { flex: none; justify-content: flex-start; gap: 15px; }
 .portrait .info > * { margin-top: 0; }

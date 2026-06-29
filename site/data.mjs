@@ -106,7 +106,7 @@ export const toc = {
 export const products = [
   {
     id: 'yen-tho',
-    media: { type: 'single', img: 'yentho-3.jpg' },
+    media: { type: 'single', img: 'yentho-3.jpg', wide: true },
     vi: {
       kicker: 'SẢN PHẨM 01 · YẾN SÀO NGUYÊN BẢN',
       title: 'Yến Thô', titleSize: 46,
