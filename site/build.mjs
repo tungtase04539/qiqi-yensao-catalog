@@ -6,6 +6,9 @@ import { site, cover, intro, toc, products, gifts, thanks } from './data.mjs';
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const attr = (s) => esc(s).replace(/"/g, '&quot;');
 
+// Portrait (9:16) build for phones — same data, vertical layout via styles-portrait.css.
+const PORTRAIT = !!process.env.PORTRAIT;
+
 const corners = `<span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>`;
 const logo = (lang) => `<img class="corner-logo" src="assets/logo-corner.webp" alt="${attr(lang === 'cn' ? 'QiQi 燕窝' : 'QiQi Yến')}">`;
 const footer = (lang) => `<div class="footer">${esc(site.productFooter[lang])}</div>`;
@@ -262,16 +265,17 @@ const html = `<!DOCTYPE html>
 <title>QiQi Yến Sào · Báo Giá / 报价单</title>
 <link rel="stylesheet" href="fonts.css">
 <link rel="stylesheet" href="styles.css">
+${PORTRAIT ? '<link rel="stylesheet" href="styles-portrait.css">' : ''}
 <script>document.documentElement.className += ' preloading';</script>
 </head>
-<body>
+<body${PORTRAIT ? ' class="portrait"' : ''}>
 <div id="loader"><div class="ring"></div><div class="ld-text">QiQi Yến Sào</div></div>
 <main class="deck">
 ${allPages.join('\n')}
 </main>
 <script>
 (function () {
-  var W = 1123;
+  var W = ${PORTRAIT ? 1080 : 1123};
   function fit() {
     var avail = document.documentElement.clientWidth - 12;
     document.documentElement.style.setProperty('--s', Math.min(1, avail / W));
@@ -308,5 +312,6 @@ ${allPages.join('\n')}
 </html>
 `;
 
-writeFileSync(new URL('./index.html', import.meta.url), html);
-console.log(`Generated index.html — ${allPages.length} pages.`);
+const outFile = PORTRAIT ? './portrait.html' : './index.html';
+writeFileSync(new URL(outFile, import.meta.url), html);
+console.log(`Generated ${outFile.slice(2)} — ${allPages.length} pages${PORTRAIT ? ' (portrait 9:16)' : ''}.`);

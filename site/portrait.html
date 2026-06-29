@@ -6,10 +6,10 @@
 <title>QiQi Yến Sào · Báo Giá / 报价单</title>
 <link rel="stylesheet" href="fonts.css">
 <link rel="stylesheet" href="styles.css">
-
+<link rel="stylesheet" href="styles-portrait.css">
 <script>document.documentElement.className += ' preloading';</script>
 </head>
-<body>
+<body class="portrait">
 <div id="loader"><div class="ring"></div><div class="ld-text">QiQi Yến Sào</div></div>
 <main class="deck">
 <div class="sheet"><section class="page" data-kind="cover" data-lang="vi">
@@ -1255,7 +1255,7 @@
 </main>
 <script>
 (function () {
-  var W = 1123;
+  var W = 1080;
   function fit() {
     var avail = document.documentElement.clientWidth - 12;
     document.documentElement.style.setProperty('--s', Math.min(1, avail / W));

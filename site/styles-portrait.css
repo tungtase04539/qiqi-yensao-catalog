@@ -1,0 +1,138 @@
+/* ============================================================================
+   QiQi Yến Sào — PORTRAIT (9:16) overrides for phones.
+   Loaded after styles.css. Reuses every component (colours, fonts, nutrient,
+   price-box, set-row…) and only reflows the page to a 1080×1920 vertical card
+   and scales type up for comfortable reading on a phone.
+   ========================================================================== */
+
+.portrait { --page-w: 1080px; --page-h: 1920px; }
+.portrait .sheet { width: calc(1080px * var(--s,1)); height: calc(1920px * var(--s,1)); }
+
+/* Page chrome scaled for the taller card */
+.portrait .corner-logo { top: 52px; right: 60px; width: 104px; }
+.portrait .footer { left: 64px; right: 64px; bottom: 40px; font-size: 17px; }
+.portrait .page::before { inset: 30px; }
+.portrait .page::after  { inset: 39px; }
+.portrait .corner.tl { left: 21px; top: 21px; } .portrait .corner.tr { right: 21px; top: 21px; }
+.portrait .corner.bl { left: 21px; bottom: 21px; } .portrait .corner.br { right: 21px; bottom: 21px; }
+.portrait .corner { width: 16px; height: 16px; }
+
+/* ── Shared type, bumped for phone ──────────────────────────────────────── */
+.portrait .kicker { font-size: 19px; letter-spacing: .26em; }
+.portrait .title { font-size: calc(var(--title-size, 46px) * 1.32); margin-top: 12px; }
+.portrait .subtitle { font-size: 23px; margin-top: 12px; }
+.portrait .desc { font-size: 23px; line-height: 1.62; margin-top: 18px; }
+.portrait .cn .desc, .portrait.cn .desc { font-size: 22px; }
+.portrait .section-label { font-size: 17px; letter-spacing: .22em; }
+.portrait .nutrition { gap: 22px 48px; margin-top: 18px; }
+.portrait .nutrient { padding-left: 16px; border-left-width: 3px; }
+.portrait .nutrient .value { font-size: 34px; }
+.portrait .nutrient .label { font-size: 17px; margin-top: 5px; }
+.portrait .suitable { gap: 13px; margin-top: 14px; }
+.portrait .suit-item .txt { font-size: 21px; line-height: 1.4; }
+.portrait .suit-item .dot { width: 9px; height: 9px; margin-top: 8px; }
+.portrait .spec { margin-top: 24px; gap: 18px; }
+.portrait .spec .spec-label { font-size: 17px; letter-spacing: .22em; }
+.portrait .spec .spec-value { font-size: 21px; }
+.portrait .price-box { margin-top: 22px; padding: 20px 28px; }
+.portrait .price-box .price-label { font-size: 25px; }
+.portrait .price-box .price { font-size: 54px; }
+.portrait .price .price-aff { font-size: 28px; }
+.portrait .price .price-unit { font-size: 24px; }
+
+/* ── Product: image on top, info below ──────────────────────────────────── */
+.portrait .layout {
+  flex-direction: column;
+  padding: 58px 76px 66px;
+  gap: 30px;
+}
+.portrait .media-gallery { width: 100%; flex: none; gap: 16px; }
+.portrait .media-gallery .hero { flex: none; height: 430px; }
+.portrait .media-gallery .thumbs { gap: 16px; }
+.portrait .media-gallery .thumb img { height: 210px; }
+/* single product image is a portrait poster → centred portrait frame (no crop) */
+.portrait .media-single { width: auto; flex: none; align-self: center; }
+.portrait .media-single .hero { flex: none; width: 600px; height: 770px; }
+.portrait .info { flex: 1; }
+
+/* ── Gift: portrait box poster on top, info below ───────────────────────── */
+.portrait .gift-media { width: auto; flex: none; align-self: center; }
+.portrait .gift-media .hero { flex: none; width: 600px; height: 770px; }
+.portrait .gift-info { flex: 1; }
+.portrait .gift-title { font-size: calc(var(--title-size, 42px) * 1.3); margin-top: 12px; }
+.portrait .gift-subtitle { font-size: 21px; margin-top: 12px; }
+.portrait .gift-price-head { margin-bottom: 16px; }
+.portrait .gift-price-head .unit-note { font-size: 17px; }
+.portrait .set-list { gap: 14px; }
+.portrait .set-row { padding: 18px 26px; }
+.portrait .set-row.featured { padding: 19px 26px; }
+.portrait .set-name { font-size: 30px; }
+.portrait .cn .set-name, .portrait.cn .set-name { font-size: 29px; }
+.portrait .set-sub { font-size: 16px; margin-top: 4px; }
+.portrait .set-price { font-size: 36px; }
+.portrait .set-row.featured .set-price { font-size: 38px; }
+.portrait .set-badge { font-size: 15px; }
+
+/* ── Cover: seal on top, text below (centred) ───────────────────────────── */
+.portrait .cover-layout {
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  padding: 150px 90px 90px;
+  gap: 28px;
+}
+.portrait .cover-divider { display: none; }
+.portrait .seal-wrap { width: auto; }
+.portrait .seal { width: 520px; height: 520px; }
+.portrait .seal img { width: 340px; height: 340px; }
+.portrait .cover-main { align-items: center; text-align: center; }
+.portrait .cover-kicker { font-size: 21px; letter-spacing: .32em; }
+.portrait .cover-title { font-size: 120px; margin-top: 26px; }
+.portrait.cn .cover-title, .portrait .cn .cover-title { font-size: 130px; }
+.portrait .cover-rule { margin: 30px auto 0; width: 96px; }
+.portrait .cover-bullets { align-items: center; gap: 18px; margin-top: 34px; }
+.portrait .cover-bullet .txt { font-size: 23px; }
+.portrait .cover-tagline { font-size: 30px; margin-top: 34px; }
+.portrait .cover-footer { left: 110px; right: 110px; bottom: 70px; }
+.portrait .cover-ribbon { font-size: 17px; }
+.portrait .cover-contact { font-size: 25px; gap: 26px; margin-top: 16px; }
+.portrait .cover-contact .num img { width: 36px; height: 24px; }
+.portrait .cover-org { font-size: 17px; margin-top: 14px; }
+
+/* ── Intro / TOC / Thanks: same vertical layout, scaled up & centred ─────── */
+.portrait .intro-layout { padding: 120px 110px; justify-content: center; }
+.portrait .intro-kicker { font-size: 20px; }
+.portrait .intro-heading { font-size: 50px; }
+.portrait .intro-salutation { font-size: 26px; margin-top: 14px; }
+.portrait .intro-body { font-size: 23px; line-height: 1.78; max-width: 860px; margin-top: 16px; }
+.portrait .cn .intro-body, .portrait.cn .intro-body { line-height: 1.9; }
+.portrait .intro-rule { margin-top: 26px; } .portrait .intro-rule .seg { width: 80px; }
+.portrait .intro-cert-label { font-size: 19px; margin-top: 30px; }
+.portrait .certs { gap: 44px; margin-top: 26px; }
+.portrait .cert .frame img { height: 360px; }
+.portrait .cert .cap { font-size: 17px; }
+
+.portrait .toc-layout { padding: 120px 110px; }
+.portrait .toc-kicker { font-size: 20px; }
+.portrait .toc-title { font-size: 70px; }
+.portrait .toc-subtitle { font-size: 22px; margin-top: 12px; }
+.portrait .toc-rule { margin-top: 24px; } .portrait .toc-rule .seg { width: 80px; }
+.portrait .toc-list { width: 880px; margin-top: 40px; }
+.portrait .toc-row { padding: 40px 8px; gap: 36px; }
+.portrait .toc-no { font-size: 58px; width: 86px; }
+.portrait .toc-name { font-size: 38px; }
+.portrait .cn .toc-name, .portrait.cn .toc-name { font-size: 37px; }
+.portrait .toc-desc { font-size: 20px; margin-top: 8px; }
+.portrait .toc-row .gem { width: 12px; height: 12px; }
+
+.portrait .thanks-layout { padding: 140px 120px; }
+.portrait .thanks-seal { width: 250px; height: 250px; margin-bottom: 30px; }
+.portrait .thanks-seal img { width: 168px; height: 168px; }
+.portrait .thanks-kicker { font-size: 20px; }
+.portrait .thanks-title { font-size: 76px; }
+.portrait .thanks-subtitle { font-size: 28px; }
+.portrait .thanks-body { font-size: 23px; line-height: 1.8; }
+.portrait .thanks-closing { font-size: 26px; }
+.portrait .thanks-contact-label { font-size: 19px; }
+.portrait .contact-row { font-size: 26px; }

@@ -48,10 +48,9 @@
   .lang button:hover{border-color:var(--gold-l);}
 
   main{flex:1; display:flex; align-items:center; justify-content:center; padding:10px; min-height:0;}
-  /* Fill the desktop: size the single landscape page by available height
-     (width = height × 1.414) so it is as large as possible. The side nav
-     buttons float over the margins, so the page can use almost full width. */
-  .bookwrap{ width: min(94vw, calc((100vh - 92px) * 1.414)); margin:0 auto; }
+  /* Book size is computed in JS from the page aspect ratio (landscape on
+     desktop/tablet, 9:16 portrait on phones) so it fills the screen. */
+  .bookwrap{ margin:0 auto; }
   #flip{ touch-action: pan-y; min-width:0 !important; }
   /* HTML-render pages: real <img> elements stay crisp at any device-pixel-ratio
      (the canvas renderer used by loadFromImages blurs on high-DPR phones). */
@@ -110,6 +109,30 @@
     var PGLABEL = { vi: 'Trang', cn: '页' };
     var book = null, currentLang = 'vi', booksLoaded = false;
 
+    // Detect phone vs tablet/desktop → choose page set & aspect.
+    // Phones get the 9:16 portrait layout; tablets & desktops get A4 landscape.
+    var IS_PHONE = (function () {
+      var ua = navigator.userAgent || '';
+      var ipad = /iPad/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      var androidTablet = /Android/i.test(ua) && !/Mobile/i.test(ua);
+      if (ipad || androidTablet) return false;                 // tablets → landscape
+      return /iPhone|iPod|Android.*Mobile|Windows Phone|webOS|BlackBerry|IEMobile|Opera Mini/i.test(ua);
+    })();
+    var PAGEDIR = IS_PHONE ? 'pages-9x16' : 'pages';
+    var PW = IS_PHONE ? 1080 : 1123;
+    var PH = IS_PHONE ? 1920 : 794;
+    var ASPECT = PW / PH;   // width / height
+    document.documentElement.setAttribute('data-mode', IS_PHONE ? 'portrait' : 'landscape');
+
+    function sizeBook(){
+      var wrap = document.querySelector('.bookwrap');
+      var header = document.querySelector('header');
+      var headerH = header ? header.offsetHeight : 66;
+      var availH = window.innerHeight - headerH - (IS_PHONE ? 18 : 26);
+      var availW = window.innerWidth * (IS_PHONE ? 0.98 : 0.96);
+      wrap.style.width = Math.min(availW, availH * ASPECT) + 'px';
+    }
+
     function makePages(lang){
       // Build real DOM page elements (HTML render → crisp on every screen).
       var arr = [];
@@ -117,7 +140,7 @@
         var d = document.createElement('div');
         d.className = 'page';
         var img = document.createElement('img');
-        img.src = 'pages/' + lang + '/' + String(i).padStart(2,'0') + '.jpg';
+        img.src = PAGEDIR + '/' + lang + '/' + String(i).padStart(2,'0') + '.jpg';
         img.alt = ''; img.draggable = false; img.decoding = 'async';
         d.appendChild(img);
         arr.push(d);
@@ -131,13 +154,13 @@
     function ensureBook(){
       if (book) return;
       book = new St.PageFlip(document.getElementById('flip'), {
-        width: 1123, height: 794,
+        width: PW, height: PH,
         size: 'stretch',
         // Force single-page (portrait) always: orientation goes portrait when
         // container width < 2*minWidth. The big minWidth is neutralised for
         // layout by `#flip{min-width:0!important}`, so it only flips the mode.
         minWidth: 3000, maxWidth: 2000,
-        minHeight: 198, maxHeight: 1414,
+        minHeight: 1, maxHeight: 4000,
         drawShadow: true, maxShadowOpacity: 0.5,
         flippingTime: 750, usePortrait: true, autoSize: true,
         showCover: false, mobileScrollSupport: false, swipeDistance: 25,
@@ -152,6 +175,7 @@
       document.getElementById('btn-cn').classList.toggle('active', lang === 'cn');
       document.getElementById('pglabel').textContent = PGLABEL[lang];
       document.getElementById('total').textContent = PAGES[lang];
+      sizeBook();
       ensureBook();
       // First load uses loadFromHTML; switching languages uses updateFromHtml
       // on the SAME instance (HTML render = crisp DOM <img>, no canvas blur).
@@ -165,6 +189,7 @@
       if (e.key === 'ArrowLeft') book.flipPrev();
       else if (e.key === 'ArrowRight') book.flipNext();
     });
+    window.addEventListener('resize', function(){ sizeBook(); if (book && book.update) book.update(); });
     window.addEventListener('load', function(){ setLang('vi'); });
   </script>
 </body>
